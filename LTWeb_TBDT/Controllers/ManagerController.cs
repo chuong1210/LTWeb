@@ -8,5 +8,9 @@ namespace LTWeb_TBDT.Controllers
 		{
 			return View();
 		}
+		public IActionResult Admin()
+		{
+			return View();
+		}
 	}
 }
