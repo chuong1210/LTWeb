@@ -1,6 +1,20 @@
-﻿<header id="header">
+﻿<style>
+	.header-bottom .search_box,
+	.header-bottom .fa-shopping-bag {
+		display: inline-block; /* Đảm bảo các phần tử nằm cạnh nhau */
+		vertical-align: middle; /* Căn giữa theo chiều dọc */
+	}
+
+	.header-bottom .fa-shopping-bag {
+		font-size: 30px; /* Điều chỉnh kích thước icon */
+	}
+
+	.header-bottom .search_box input {
+		height: 35px; /* Điều chỉnh chiều cao để đồng nhất với nút giỏ hàng */
+	}
+</style>
+<header id="header">
 	<!--header-->
-	<div class="header_top">
 		<!--header_top-->
 		
 
@@ -27,7 +41,7 @@
 									<li><a asp-controller="Category">Categories</a></li>
 									<li><a asp-controller="Product" asp-action="Detail">Product Details</a></li>
 									<li><a asp-controller="Cart" asp-action="Checkout">Checkout</a></li>
-									<li><a asp-controller="Cart">Cart</a></li>
+									<li><a asp-controller="Cart" asp-action="Index">Cart</a></li>
 									<li><a asp-controller="User" asp-action="Login">Login</a></li>
 								</ul>
 							</li>
@@ -43,10 +57,17 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-sm-3">
+			
+				<div class="col-sm-2">
 					<div class="search_box pull-right">
 						<input type="text" placeholder="Search" />
 					</div>
+				</div>
+
+				<div class="col-sm-1">
+@* 					<a href="@Url.Action("Index", "Cart")"><i class="fa fa-shopping-bag"></i> Đặt Hàng</a>
+ *@
+					<a asp-controller="Cart" asp-action="Index"><i class="fa fa-shopping-bag"></i></a>
 				</div>
 			</div>
 		</div>
