@@ -50,6 +50,16 @@ CREATE TABLE DanhMuc (
     MoTa NVARCHAR(MAX)
 );
 
+INSERT INTO DanhMuc (TenDanhMuc, MoTa) VALUES (N'Điện Thoại', N'Các loại điện thoại di động');
+INSERT INTO DanhMuc (TenDanhMuc, MoTa) VALUES (N'Laptop', N'Các loại máy tính xách tay');
+INSERT INTO DanhMuc (TenDanhMuc, MoTa) VALUES (N'Máy Tính Bảng', N'Các loại máy tính bảng');
+INSERT INTO DanhMuc (TenDanhMuc, MoTa) VALUES (N'Tivi', N'Các loại tivi các kích cỡ khác nhau');
+INSERT INTO DanhMuc (TenDanhMuc, MoTa) VALUES (N'Âm Thanh', N'Thiết bị âm thanh như loa, tai nghe');
+INSERT INTO DanhMuc (TenDanhMuc, MoTa) VALUES (N'Đồng Hồ Thông Minh', N'Các loại đồng hồ thông minh');
+INSERT INTO DanhMuc (TenDanhMuc, MoTa) VALUES (N'Phụ Kiện', N'Các loại phụ kiện điện tử như sạc, cáp, bao da');
+INSERT INTO DanhMuc (TenDanhMuc, MoTa) VALUES (N'Thiết Bị Gia Dụng', N'Các loại thiết bị điện tử gia dụng');
+
+
 CREATE TABLE SanPham (
     MaSanPham INT IDENTITY(1,1) PRIMARY KEY,
     TenSanPham NVARCHAR(255) NOT NULL,
