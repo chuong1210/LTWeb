@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DoAnLapTrinhWeb\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
+      "projectUniqueName": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
       "projectName": "LTWeb_TBDT",
-      "projectPath": "D:\\DoAnLapTrinhWeb\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
+      "projectPath": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
       "packagesPath": "C:\\Users\\MinhLuan\\.nuget\\packages\\",
-      "outputPath": "D:\\DoAnLapTrinhWeb\\LTWeb\\LTWeb_TBDT\\obj\\",
+      "outputPath": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -67,24 +67,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.35, 6.0.35]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.35, 6.0.35]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.35, 6.0.35]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.35, 6.0.35]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

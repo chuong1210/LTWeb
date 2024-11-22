@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iaCmFObyMkM=",
+  "dgSpecHash": "hblc3WEPjPY=",
   "success": true,
-  "projectFilePath": "D:\\DoAnLapTrinhWeb\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\MinhLuan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.35\\microsoft.windowsdesktop.app.ref.6.0.35.nupkg.sha512",
-    "C:\\Users\\MinhLuan\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.35\\microsoft.netcore.app.ref.6.0.35.nupkg.sha512",
-    "C:\\Users\\MinhLuan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.35\\microsoft.aspnetcore.app.ref.6.0.35.nupkg.sha512",
-    "C:\\Users\\MinhLuan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.35\\microsoft.netcore.app.host.win-x64.6.0.35.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
