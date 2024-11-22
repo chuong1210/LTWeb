@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DoAnLapTrinhWeb\\LTWeb\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\minhluan\\documents\\github\\ltweb\\ltweb_tbdt\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\appsettings.json",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\appsettings.json",
+              "ToolTip": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\appsettings.json",
+              "RelativeToolTip": "LTWeb_TBDT\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-22T03:07:39.874Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
