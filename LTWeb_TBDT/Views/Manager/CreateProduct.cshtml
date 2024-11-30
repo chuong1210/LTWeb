@@ -1,0 +1,68 @@
+﻿@model LTWeb_TBDT.Models.SanPham
+
+@{
+    ViewData["Title"] = "Thêm Sản Phẩm";
+}
+
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="TenSP">Tên Sản Phẩm</label>
+            <input type="text" id="TenSP" name="TenSP" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="MoTa">Mô Tả</label>
+            <textarea id="MoTa" name="MoTa" class="form-control" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="GiaBan">Giá Bán</label>
+            <input type="number" id="GiaBan" name="GiaBan" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="SoLuongTon">Số Lượng Tồn</label>
+            <input type="number" id="SoLuongTon" name="SoLuongTon" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="HinhAnh">Hình Ảnh</label>
+            <input type="file" id="HinhAnh" name="hinhAnhFile" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="MaNhaSanXuat">Nhà Sản Xuất</label>
+            <select id="MaNhaSanXuat" name="MaNSX" class="form-control" required>
+                <option value="">Chọn Nhà Sản Xuất</option>
+                @if (ViewBag.NhaSanXuatList != null)
+                {
+                    foreach (var item in ViewBag.NhaSanXuatList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                }
+                else
+                {
+                    <option disabled>Không có dữ liệu</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="MaDanhMuc">Danh Mục</label>
+            <select id="MaDanhMuc" name="MaDanhMuc" class="form-control" required>
+                <option value="">Chọn Danh Mục</option>
+                @if (ViewBag.DanhMucList != null)
+                {
+                    foreach (var item in ViewBag.DanhMucList as List<SelectListItem>)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                }
+                else
+                {
+                    <option disabled>Không có dữ liệu</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success">Lưu Sản Phẩm</button>
+    </form>
+</div>
