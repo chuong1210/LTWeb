@@ -1,22 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\",
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\lenovo\\desktop\\ltweb\\ltweb_tbdt\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\views\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\lenovo\\desktop\\ltweb\\ltweb_tbdt\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\views\\manager\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\manager\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\lenovo\\desktop\\ltweb\\ltweb_tbdt\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\lenovo\\desktop\\ltweb\\ltweb_tbdt\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\lenovo\\desktop\\ltweb\\ltweb_tbdt\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\lenovo\\desktop\\ltweb\\ltweb_tbdt\\data\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\data\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\lenovo\\desktop\\ltweb\\ltweb_tbdt\\data\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\data\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\lenovo\\desktop\\ltweb\\ltweb_tbdt\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,73 +42,111 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "LTWeb_TBDT\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T20:12:25.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaiKhoan.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Data\\TaiKhoan.cs",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Data\\TaiKhoan.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Data\\TaiKhoan.cs",
+              "RelativeToolTip": "LTWeb_TBDT\\Data\\TaiKhoan.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:51:45.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Data\\SanPham.cs",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Data\\SanPham.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Data\\SanPham.cs",
+              "RelativeToolTip": "LTWeb_TBDT\\Data\\SanPham.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:51:32.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaiKhoan.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Models\\TaiKhoan.cs",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Models\\TaiKhoan.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Models\\TaiKhoan.cs",
+              "RelativeToolTip": "LTWeb_TBDT\\Models\\TaiKhoan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:50:28.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductModel.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Models\\ProductModel.cs",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Models\\ProductModel.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Models\\ProductModel.cs",
+              "RelativeToolTip": "LTWeb_TBDT\\Models\\ProductModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:50:19.101Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CreateProduct.cshtml",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\CreateProduct.cshtml",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\Manager\\CreateProduct.cshtml",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\CreateProduct.cshtml",
-              "RelativeToolTip": "LTWeb_TBDT\\Views\\Manager\\CreateProduct.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T10:32:45.435Z",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "LTWeb_TBDT\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAswAEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:48:14.293Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "RelativeToolTip": "LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T08:35:05.34Z",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Controllers\\UserController.cs",
+              "RelativeToolTip": "LTWeb_TBDT\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAkwF0AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:47:45.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ManagerController.cs",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "RelativeToolTip": "LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAkwBQAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T08:23:14.099Z",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\User\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\LTWeb\\LTWeb_TBDT\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "LTWeb_TBDT\\Views\\User\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T19:47:08.044Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SanPham.cs",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Models\\SanPham.cs",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Models\\SanPham.cs",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Models\\SanPham.cs",
-              "RelativeToolTip": "LTWeb_TBDT\\Models\\SanPham.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T08:01:04.484Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 1144,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

@@ -11,7 +11,7 @@ CREATE TABLE TaiKhoan (
 
 CREATE TABLE NhanVien (
     MaNhanVien INT IDENTITY(1,1) PRIMARY KEY,
-    TenNhanVien NVARCHAR(100) NOT NULL,
+    HoTen NVARCHAR(100) NOT NULL,
     NgaySinh DATE,
     Email NVARCHAR(100),
     SoDienThoai NVARCHAR(15),
@@ -27,7 +27,7 @@ CREATE TABLE Admin (
 
 CREATE TABLE KhachHang (
     MaKhachHang INT IDENTITY(1,1) PRIMARY KEY,
-    TenKhachHang NVARCHAR(100) NOT NULL,
+    HoTen NVARCHAR(100) NOT NULL,
     DiaChi NVARCHAR(255),
     SoDienThoai NVARCHAR(15),
     Email NVARCHAR(100),
@@ -123,3 +123,28 @@ INSERT INTO SanPham (TenSanPham, MoTa, GiaBan, SoLuongTon, HinhAnh, MaNhaSanXuat
 (N'Galaxy Tab S8', N'Máy tính bảng mạnh mẽ từ Samsung', 18999000, 60, 'SP008.jpg', 2, 3),
 (N'Apple Watch Series 8', N'Đồng hồ thông minh mới từ Apple', 11999000, 200, 'SP009.jpg', 1, 6),
 (N'AirPods Pro 2', N'Tai nghe không dây cao cấp từ Apple', 5499000, 300, 'SP0010.jpg', 1, 5);
+INSERT INTO TaiKhoan (TenDangNhap, MatKhau, LoaiTaiKhoan)
+VALUES 
+('admin1', '123456', 'Admin'),
+('nhanvien1', '123456', 'NhanVien'),
+('khachhang1', '123456', 'KhachHang'),
+('nhanvien2', 'abcdef', 'NhanVien'),
+('khachhang2', 'abcdef', 'KhachHang');
+INSERT INTO NhanVien (HoTen, NgaySinh, Email, SoDienThoai, MaTaiKhoan)
+VALUES 
+('Nguyen Van A', '1990-05-15', 'nva@example.com', '0123456789', 2),
+('Tran Thi B', '1992-08-22', 'ttb@example.com', '0987654321', 4),
+('Le Van C', '1988-03-12', 'lvc@example.com', '0123987654', NULL),
+('Pham Thi D', '1995-07-19', NULL, '0912345678', NULL),
+('Hoang Van E', '1985-01-10', 'hve@example.com', '0123456780', NULL);
+INSERT INTO Admin (MaTaiKhoan)
+VALUES 
+(1)
+INSERT INTO KhachHang (HoTen, DiaChi, SoDienThoai, Email, MaTaiKhoan)
+VALUES 
+('Nguyen Minh A', 'Hanoi', '0123456789', 'nma@gmail.com', 3),
+('Tran Van B', 'HCM', '0987654321', 'tvb@gmail.com', NULL),
+('Le Hanh C', 'Hue', '0912345678', 'lhc@gmail.com', NULL),
+('Pham Thi E', 'Vinh', NULL , 'no-mail@example.com',NULL),
+('Pham Thi G', 'Vung Tau', '0909345678', 'ptg@gmail.com', NULL);
+
