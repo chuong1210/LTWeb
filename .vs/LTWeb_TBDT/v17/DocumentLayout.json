@@ -1,87 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\views\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\views\\manager\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\manager\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateProduct.cshtml",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\CreateProduct.cshtml",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\Manager\\CreateProduct.cshtml",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\CreateProduct.cshtml",
-              "RelativeToolTip": "LTWeb_TBDT\\Views\\Manager\\CreateProduct.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T10:32:45.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "RelativeToolTip": "LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T08:35:05.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ManagerController.cs",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "RelativeToolTip": "LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAkwBQAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T08:23:14.099Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SanPham.cs",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Models\\SanPham.cs",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Models\\SanPham.cs",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Models\\SanPham.cs",
-              "RelativeToolTip": "LTWeb_TBDT\\Models\\SanPham.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T08:01:04.484Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
         {
           "DockedWidth": 1144,
           "SelectedChildIndex": -1,

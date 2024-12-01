@@ -4,40 +4,46 @@
     ViewData["Title"] = "Thêm Sản Phẩm";
 }
 
-
 <div class="container mt-5">
-    <h1>@ViewData["Title"]</h1>
+    <h1 class="text-center text-primary">@ViewData["Title"]</h1>
 
-    <form method="post" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="TenSP">Tên Sản Phẩm</label>
-            <input type="text" id="TenSP" name="TenSP" class="form-control" required />
+    <form method="post" enctype="multipart/form-data" class="p-4 border rounded bg-light shadow-sm">
+        <div class="form-group mb-3">
+            <label for="TenSP" class="form-label">Tên Sản Phẩm</label>
+            <input type="text" id="TenSP" name="TenSP" class="form-control" placeholder="Nhập tên sản phẩm" required />
         </div>
-        <div class="form-group">
-            <label for="MoTa">Mô Tả</label>
-            <textarea id="MoTa" name="MoTa" class="form-control" required></textarea>
+
+        <div class="form-group mb-3">
+            <label for="MoTa" class="form-label">Mô Tả</label>
+            <textarea id="MoTa" name="MoTa" class="form-control" rows="4" placeholder="Nhập mô tả sản phẩm" required></textarea>
         </div>
-        <div class="form-group">
-            <label for="GiaBan">Giá Bán</label>
-            <input type="number" id="GiaBan" name="GiaBan" class="form-control" required />
+
+        <div class="form-group mb-3">
+            <label for="GiaBan" class="form-label">Giá Bán</label>
+            <input type="number" id="GiaBan" name="GiaBan" class="form-control" placeholder="Nhập giá bán" required />
         </div>
-        <div class="form-group">
-            <label for="SoLuongTon">Số Lượng Tồn</label>
-            <input type="number" id="SoLuongTon" name="SoLuongTon" class="form-control" required />
+
+        <div class="form-group mb-3">
+            <label for="SoLuongTon" class="form-label">Số Lượng Tồn</label>
+            <input type="number" id="SoLuongTon" name="SoLuongTon" class="form-control" placeholder="Nhập số lượng tồn" required />
         </div>
-        <div class="form-group">
-            <label for="HinhAnh">Hình Ảnh</label>
+
+        <div class="form-group mb-3">
+            <label for="HinhAnh" class="form-label">Hình Ảnh</label>
             <input type="file" id="HinhAnh" name="hinhAnhFile" class="form-control" />
         </div>
-        <div class="form-group">
-            <label for="MaNhaSanXuat">Nhà Sản Xuất</label>
-            <select id="MaNhaSanXuat" name="MaNSX" class="form-control" required>
-                <option value="">Chọn Nhà Sản Xuất</option>
+
+        <div class="form-group mb-3">
+            <label for="MaNhaSanXuat" class="form-label">Nhà Sản Xuất</label>
+            <select id="MaNhaSanXuat" name="MaNSX" class="form-select" required>
+                <option value="" disabled selected>Chọn Nhà Sản Xuất</option>
                 @if (ViewBag.NhaSanXuatList != null)
                 {
                     foreach (var item in ViewBag.NhaSanXuatList as List<SelectListItem>)
                     {
-                        <option value="@item.Value">@item.Text</option>
+                        string selectedAttribute = item.Selected ? "selected=\"selected\"" : "";
+                        string optionTag = $"<option value=\"{item.Value}\" {selectedAttribute}>{item.Text}</option>";
+                        @Html.Raw(optionTag)
                     }
                 }
                 else
@@ -46,15 +52,18 @@
                 }
             </select>
         </div>
-        <div class="form-group">
-            <label for="MaDanhMuc">Danh Mục</label>
-            <select id="MaDanhMuc" name="MaDanhMuc" class="form-control" required>
-                <option value="">Chọn Danh Mục</option>
+
+        <div class="form-group mb-4">
+            <label for="MaDanhMuc" class="form-label">Danh Mục</label>
+            <select id="MaDanhMuc" name="MaDanhMuc" class="form-select" required>
+                <option value="" disabled selected>Chọn Danh Mục</option>
                 @if (ViewBag.DanhMucList != null)
                 {
                     foreach (var item in ViewBag.DanhMucList as List<SelectListItem>)
                     {
-                        <option value="@item.Value">@item.Text</option>
+                        string selectedAttribute = item.Selected ? "selected=\"selected\"" : "";
+                        string optionTag = $"<option value=\"{item.Value}\" {selectedAttribute}>{item.Text}</option>";
+                        @Html.Raw(optionTag)
                     }
                 }
                 else
@@ -63,6 +72,14 @@
                 }
             </select>
         </div>
-        <button type="submit" class="btn btn-success">Lưu Sản Phẩm</button>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success px-4">
+                <i class="fa fa-save"></i> Lưu Sản Phẩm
+            </button>
+            <a href="@Url.Action("Index", "Manager")" class="btn btn-secondary px-4">
+                <i class="fa fa-arrow-left"></i> Quay lại
+            </a>
+        </div>
     </form>
 </div>

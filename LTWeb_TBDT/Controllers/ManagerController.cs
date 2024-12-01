@@ -23,9 +23,10 @@ namespace LTWeb_TBDT.Controllers
                 connection.Open();
 
                 // Thêm điều kiện tìm kiếm nếu có
-                string query = "SELECT * FROM SanPham WHERE TenSanPham LIKE @SearchQuery";
+                string query = "SELECT * FROM SanPham WHERE TenSanPham LIKE @SearchQuery OR MoTa LIKE @SearchQuery";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@SearchQuery", "%" + searchQuery + "%");
+                command.Parameters.AddWithValue("@SearchQuery", "%" + (searchQuery ?? string.Empty) + "%");
+
 
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -155,6 +156,168 @@ namespace LTWeb_TBDT.Controllers
             // Nếu có lỗi, tiếp tục hiển thị form và dữ liệu danh mục, nhà sản xuất
             return View(sanPham);
         }
+
+        public IActionResult EditProduct(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Lấy thông tin sản phẩm theo ID
+                string querySP = "SELECT * FROM SanPham WHERE MaSanPham = @Id";
+                SqlCommand commandSP = new SqlCommand(querySP, connection);
+                commandSP.Parameters.AddWithValue("@Id", id);
+
+                SqlDataReader readerSP = commandSP.ExecuteReader();
+                SanPham sanPham = null;
+
+                if (readerSP.Read())
+                {
+                    sanPham = new SanPham(
+                        Convert.ToInt32(readerSP["MaSanPham"]),
+                        readerSP["TenSanPham"].ToString(),
+                        readerSP["MoTa"].ToString(),
+                        Convert.ToDouble(readerSP["GiaBan"]),
+                        Convert.ToInt32(readerSP["SoLuongTon"]),
+                        readerSP["HinhAnh"].ToString(),
+                        Convert.ToInt32(readerSP["MaNhaSanXuat"]),
+                        Convert.ToInt32(readerSP["MaDanhMuc"])
+                    );
+                }
+                readerSP.Close();
+
+                // Kiểm tra sản phẩm có tồn tại
+                if (sanPham == null)
+                {
+                    return NotFound("Sản phẩm không tồn tại.");
+                }
+
+                // Lấy danh sách Nhà Sản Xuất
+                string queryNSX = "SELECT MaNhaSanXuat, TenNhaSanXuat FROM NhaSanXuat";
+                SqlCommand commandNSX = new SqlCommand(queryNSX, connection);
+                SqlDataReader readerNSX = commandNSX.ExecuteReader();
+                List<SelectListItem> nhaSanXuatList = new List<SelectListItem>();
+
+                while (readerNSX.Read())
+                {
+                    nhaSanXuatList.Add(new SelectListItem
+                    {
+                        Value = readerNSX["MaNhaSanXuat"].ToString(),
+                        Text = readerNSX["TenNhaSanXuat"].ToString(),
+                        Selected = (sanPham.MaNSX == Convert.ToInt32(readerNSX["MaNhaSanXuat"]))
+                    });
+                }
+                readerNSX.Close();
+
+                // Lấy danh sách Danh Mục
+                string queryDM = "SELECT MaDanhMuc, TenDanhMuc FROM DanhMuc";
+                SqlCommand commandDM = new SqlCommand(queryDM, connection);
+                SqlDataReader readerDM = commandDM.ExecuteReader();
+                List<SelectListItem> danhMucList = new List<SelectListItem>();
+
+                while (readerDM.Read())
+                {
+                    danhMucList.Add(new SelectListItem
+                    {
+                        Value = readerDM["MaDanhMuc"].ToString(),
+                        Text = readerDM["TenDanhMuc"].ToString(),
+                        Selected = (sanPham.MaDanhMuc == Convert.ToInt32(readerDM["MaDanhMuc"]))
+                    });
+                }
+                readerDM.Close();
+
+                ViewBag.NhaSanXuatList = nhaSanXuatList;
+                ViewBag.DanhMucList = danhMucList;
+
+                return View(sanPham);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult EditProduct(SanPham sanPham, IFormFile hinhAnhFile, string ExistingHinhAnh)
+        {
+            string hinhAnhPath = ExistingHinhAnh; // Lấy giá trị ảnh hiện tại
+
+            // Xử lý upload ảnh mới nếu có
+            if (hinhAnhFile != null && hinhAnhFile.Length > 0)
+            {
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", hinhAnhFile.FileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    hinhAnhFile.CopyTo(stream);
+                }
+
+                hinhAnhPath = hinhAnhFile.FileName;
+            }
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Cập nhật thông tin sản phẩm
+                string query = "UPDATE SanPham SET TenSanPham = @TenSanPham, MoTa = @MoTa, GiaBan = @GiaBan, " +
+                               "SoLuongTon = @SoLuongTon, HinhAnh = @HinhAnh, MaNhaSanXuat = @MaNhaSanXuat, MaDanhMuc = @MaDanhMuc " +
+                               "WHERE MaSanPham = @MaSanPham";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@TenSanPham", sanPham.TenSP);
+                command.Parameters.AddWithValue("@MoTa", sanPham.MoTa);
+                command.Parameters.AddWithValue("@GiaBan", sanPham.GiaBan);
+                command.Parameters.AddWithValue("@SoLuongTon", sanPham.SoLuongTon);
+                command.Parameters.AddWithValue("@HinhAnh", hinhAnhPath);
+                command.Parameters.AddWithValue("@MaNhaSanXuat", sanPham.MaNSX);
+                command.Parameters.AddWithValue("@MaDanhMuc", sanPham.MaDanhMuc);
+                command.Parameters.AddWithValue("@MaSanPham", sanPham.MaSP);
+
+                command.ExecuteNonQuery();
+            }
+
+            // Thông báo thành công và chuyển hướng về danh sách sản phẩm
+            TempData["SuccessMessage"] = "Sản phẩm đã được cập nhật thành công!";
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Câu lệnh SQL để xóa sản phẩm theo ID
+                    string query = "DELETE FROM SanPham WHERE MaSanPham = @Id";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    // Thêm tham số ID vào câu lệnh SQL
+                    command.Parameters.AddWithValue("@Id", id);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    // Kiểm tra xem có bản ghi nào bị ảnh hưởng
+                    if (rowsAffected > 0)
+                    {
+                        TempData["SuccessMessage"] = "Xóa sản phẩm thành công!";
+                    }
+                    else
+                    {
+                        TempData["ErrorMessage"] = "Không tìm thấy sản phẩm để xóa.";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    TempData["ErrorMessage"] = "Đã xảy ra lỗi: " + ex.Message;
+                }
+            }
+
+            return RedirectToAction("Index");
+        }
+
+
+
+
 
     }
 }
