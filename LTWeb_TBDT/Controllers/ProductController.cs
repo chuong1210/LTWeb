@@ -24,9 +24,9 @@ namespace LTWeb_TBDT.Controllers
 		}
 
 
-	
 
-		// GET: Products
+
+	
 		public async Task<IActionResult> Index1()
 		{
 			return View(await _context.SanPhams.ToListAsync());
@@ -59,7 +59,7 @@ namespace LTWeb_TBDT.Controllers
 		// POST: Products/Create
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Create([Bind("Id,Name,Price,Description")] SanPham product)
+		public async Task<IActionResult> Create([Bind("Id,Name,Price,Description")] SanPham product,IFormFile formFile)
 		{
 			if (ModelState.IsValid)
 			{
@@ -67,6 +67,7 @@ namespace LTWeb_TBDT.Controllers
 				await _context.SaveChangesAsync();
 				return RedirectToAction(nameof(Index));
 			}
+		//	product.Hinh = MyUltil.UploadImage(formFile, "KhachHang");
 
 
 			//if (ModelState.IsValid)
@@ -80,7 +81,6 @@ namespace LTWeb_TBDT.Controllers
 			//		kh.VaiTro = 0;
 			//		if (urlImage != null)
 			//		{
-			//			kh.Hinh = MyUtil.UploadImage(urlImage, "KhachHang");
 			//		}
 			//		db.Add(kh);
 			//		db.SaveChanges();
