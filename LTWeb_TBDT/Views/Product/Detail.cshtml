@@ -1,1 +1,48 @@
-﻿
+﻿@model LTWeb_TBDT.Data.SanPham
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <partial name="_SidebarPartial" />
+            </div>
+
+            <div class="col-sm-9 padding-right">
+                <div class="product-details">
+                    <div class="col-sm-5">
+                        <div class="view-product">
+                            <img src="~/images/@Model.HinhAnh" width="200" height="200" alt="@Model.TenSanPham" />
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="product-information">
+                            <h2>@Model.TenSanPham</h2>
+                            <p>Product ID: @Model.MaSanPham</p>
+                            <span>
+                                <span>@Model.GiaBan.ToString("C")</span>
+                                <form method="post" action="@Url.Action("AddToCart", "Cart")">
+                                    <input type="hidden"  name="id" value="@Model.MaSanPham" />
+                                    <label>Quantity:</label>
+                                    <input type="number" name="quantity" value="1" min="1" />
+                                    <button type="submit" class="btn btn-fefault cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        Add to cart
+                                    </button>
+                                </form>
+                            </span>
+                            <p><b>Availability:</b> In Stock (@Model.SoLuongTon available)</p>
+                            <p><b>Manufacturer:</b> @Model.MaNhaSanXuatNavigation.TenNhaSanXuat</p>
+                            <p><b>Category:</b> @Model.MaDanhMucNavigation.TenDanhMuc</p>
+                            <p><b>Description:</b> @Model.MoTa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

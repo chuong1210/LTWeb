@@ -18,12 +18,7 @@ namespace LTWeb_TBDT.Controllers
 			return View();
 		}
 
-		public IActionResult Detail()
-		{
-			return View();
-		}
-
-
+	
 
 
 	
@@ -33,15 +28,13 @@ namespace LTWeb_TBDT.Controllers
 		}
 
 		// GET: Products/Details/5
-		public async Task<IActionResult> Details(int? id)
+		public async Task<IActionResult> Detail(int id)
 		{
-			if (id == null)
-			{
-				return NotFound();
-			}
-
 			var product = await _context.SanPhams
-				.FirstOrDefaultAsync(m => m.MaSanPham == id);
+				.Include(s => s.MaNhaSanXuatNavigation)
+				.Include(s => s.MaDanhMucNavigation)
+				.FirstOrDefaultAsync(s => s.MaSanPham == id);
+
 			if (product == null)
 			{
 				return NotFound();
@@ -49,7 +42,6 @@ namespace LTWeb_TBDT.Controllers
 
 			return View(product);
 		}
-
 		// GET: Products/Create
 		public IActionResult Create()
 		{
