@@ -1341,6 +1341,46 @@
       "PackagePath": "staticwebassets\\images\\404\\404.png"
     },
     {
+      "Id": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\SP001.jpg",
+      "PackagePath": "staticwebassets\\images\\SP001.jpg"
+    },
+    {
+      "Id": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\SP0010.jpg",
+      "PackagePath": "staticwebassets\\images\\SP0010.jpg"
+    },
+    {
+      "Id": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\SP002.jpg",
+      "PackagePath": "staticwebassets\\images\\SP002.jpg"
+    },
+    {
+      "Id": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\SP003.jpg",
+      "PackagePath": "staticwebassets\\images\\SP003.jpg"
+    },
+    {
+      "Id": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\SP004.jpg",
+      "PackagePath": "staticwebassets\\images\\SP004.jpg"
+    },
+    {
+      "Id": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\SP005.jpg",
+      "PackagePath": "staticwebassets\\images\\SP005.jpg"
+    },
+    {
+      "Id": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\SP006.jpg",
+      "PackagePath": "staticwebassets\\images\\SP006.jpg"
+    },
+    {
+      "Id": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\SP007.jpg",
+      "PackagePath": "staticwebassets\\images\\SP007.jpg"
+    },
+    {
+      "Id": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\SP008.jpg",
+      "PackagePath": "staticwebassets\\images\\SP008.jpg"
+    },
+    {
+      "Id": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\SP009.jpg",
+      "PackagePath": "staticwebassets\\images\\SP009.jpg"
+    },
+    {
       "Id": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\blog\\blog-one.jpg",
       "PackagePath": "staticwebassets\\images\\blog\\blog-one.jpg"
     },

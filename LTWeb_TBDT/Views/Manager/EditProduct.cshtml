@@ -1,0 +1,83 @@
+﻿@model LTWeb_TBDT.Models.SanPham
+
+@{
+    ViewData["Title"] = "Sửa Sản Phẩm";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center text-primary">@ViewData["Title"]</h1>
+
+    <form method="post" enctype="multipart/form-data" class="p-4 border rounded bg-light shadow-sm">
+        <input type="hidden" name="MaSP" value="@Model.MaSP" />
+
+        <div class="form-group mb-3">
+            <label for="TenSP" class="form-label">Tên Sản Phẩm</label>
+            <input type="text" id="TenSP" name="TenSP" class="form-control" value="@Model.TenSP" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="MoTa" class="form-label">Mô Tả</label>
+            <textarea id="MoTa" name="MoTa" class="form-control" rows="4" required>@Model.MoTa</textarea>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="GiaBan" class="form-label">Giá Bán</label>
+            <input type="number" id="GiaBan" name="GiaBan" class="form-control" value="@Model.GiaBan" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="SoLuongTon" class="form-label">Số Lượng Tồn</label>
+            <input type="number" id="SoLuongTon" name="SoLuongTon" class="form-control" value="@Model.SoLuongTon" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="form-label">Hình ảnh hiện tại:</label>
+            @if (!string.IsNullOrEmpty(Model.HinhAnh))
+            {
+                <div class="mb-2">
+                    <img src="@Url.Content("~/images/" + Model.HinhAnh)" alt="Hình ảnh hiện tại" class="img-thumbnail" style="max-width: 150px; max-height: 150px;" />
+                </div>
+            }
+        </div>
+
+        <input type="hidden" name="ExistingHinhAnh" value="@Model.HinhAnh" />
+
+        <div class="form-group mb-3">
+            <label for="HinhAnh" class="form-label">Chọn hình ảnh mới (nếu có):</label>
+            <input type="file" id="HinhAnh" name="hinhAnhFile" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="MaNhaSanXuat" class="form-label">Nhà Sản Xuất</label>
+            <select id="MaNhaSanXuat" name="MaNSX" class="form-select" required>
+                @foreach (var item in ViewBag.NhaSanXuatList as List<SelectListItem>)
+                {
+                    string selectedAttribute = item.Selected ? "selected=\"selected\"" : "";
+                    string optionTag = $"<option value=\"{item.Value}\" {selectedAttribute}>{item.Text}</option>";
+                    @Html.Raw(optionTag)
+                }
+            </select>
+        </div>
+
+        <div class="form-group mb-4">
+            <label for="MaDanhMuc" class="form-label">Danh Mục</label>
+            <select id="MaDanhMuc" name="MaDanhMuc" class="form-select" required>
+                @foreach (var item in ViewBag.DanhMucList as List<SelectListItem>)
+                {
+                    string selectedAttribute = item.Selected ? "selected=\"selected\"" : "";
+                    string optionTag = $"<option value=\"{item.Value}\" {selectedAttribute}>{item.Text}</option>";
+                    @Html.Raw(optionTag)
+                }
+            </select>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success px-4">
+                <i class="fa fa-save"></i> Lưu Sản Phẩm
+            </button>
+            <a href="@Url.Action("Index", "Manager")" class="btn btn-secondary px-4">
+                <i class="fa fa-arrow-left"></i> Quay lại
+            </a>
+        </div>
+    </form>
+</div>

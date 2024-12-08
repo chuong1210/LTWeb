@@ -2007,14 +2007,14 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.Data.SqlClient >= 2.1.7",
       "Microsoft.EntityFrameworkCore >= 6.0.35",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.35",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.35"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chuon\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {}
+    "C:\\Users\\chuon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2025,12 +2025,8 @@
       "packagesPath": "C:\\Users\\chuon\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"
-      ],
       "configFilePaths": [
         "C:\\Users\\chuon\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2038,7 +2034,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -2063,6 +2058,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.Data.SqlClient": {
+            "target": "Package",
+            "version": "[2.1.7, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.35, )"

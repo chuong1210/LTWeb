@@ -101,3 +101,25 @@ SoLuongTon INT,
 FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
 
 )
+
+
+-- Thêm dữ liệu vào bảng NhaSanXuat
+INSERT INTO NhaSanXuat (TenNhaSanXuat, DiaChi, SoDienThoai, Email) VALUES
+(N'Apple', N'Cupertino, California, USA', N'18002752273', N'contact@apple.com'),
+(N'Samsung', N'Suwon, South Korea', N'18007267864', N'support@samsung.com'),
+(N'Sony', N'Tokyo, Japan', N'810362722211', N'info@sony.com'),
+(N'LG', N'Seoul, South Korea', N'18008550386', N'lg.support@lg.com'),
+(N'Dell', N'Round Rock, Texas, USA', N'18006249896', N'dell.support@dell.com');
+
+-- Thêm dữ liệu vào bảng SanPham
+INSERT INTO SanPham (TenSanPham, MoTa, GiaBan, SoLuongTon, HinhAnh, MaNhaSanXuat, MaDanhMuc) VALUES
+(N'iPhone 15', N'Dòng điện thoại mới nhất của Apple', 29999000, 100, 'SP001.jpg', 1, 1),
+(N'Điện Thoại Samsung Galaxy A05s 4GB/128GB', N'Dòng flagship mới của Samsung', 20999000, 150, 'SP002.jpg', 2, 1),
+(N'Xperia 1 IV', N'Smartphone cao cấp từ Sony', 25999000, 50, 'SP003.jpg', 3, 1),
+(N'Macbook Pro 14 inch 2021', N'Máy tính xách tay chuyên nghiệp từ Apple', 52999000, 30, 'SP004.jpg', 1, 2),
+(N'Dell XPS 13', N'Máy tính xách tay siêu mỏng từ Dell', 32999000, 40, 'SP005.jpg', 5, 2),
+(N'LG OLED CX', N'Tivi OLED cao cấp từ LG', 34999000, 20, 'SP006.jpg', 4, 4),
+(N'Bravia XR', N'Tivi 4K HDR từ Sony', 39999000, 25, 'SP007.jpg', 3, 4),
+(N'Galaxy Tab S8', N'Máy tính bảng mạnh mẽ từ Samsung', 18999000, 60, 'SP008.jpg', 2, 3),
+(N'Apple Watch Series 8', N'Đồng hồ thông minh mới từ Apple', 11999000, 200, 'SP009.jpg', 1, 6),
+(N'AirPods Pro 2', N'Tai nghe không dây cao cấp từ Apple', 5499000, 300, 'SP0010.jpg', 1, 5);
