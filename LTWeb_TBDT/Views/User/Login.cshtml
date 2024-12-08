@@ -1,41 +1,70 @@
-﻿@{
-	ViewData["Title"] = "Home Page";
-	Layout = "_LayoutLogin";
+﻿@model LTWeb_TBDT.Models.TaiKhoan
+
+@{
+    ViewData["Title"] = "Login & Signup";
+    Layout = "_LayoutLogin"; // Layout dành riêng cho trang đăng ký/đăng nhập
 }
+
 <section id="form">
-	<!--form-->
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-4 col-sm-offset-1">
-				<div class="login-form">
-					<!--login form-->
-					<h2>Login to your account</h2>
-					<form action="#">
-						<input type="text" placeholder="Name" />
-						<input type="email" placeholder="Email Address" />
-						<span>
-							<input type="checkbox" class="checkbox">
-							Keep me signed in
-						</span>
-						<button type="submit" class="btn btn-default">Login</button>
-					</form>
-				</div><!--/login form-->
-			</div>
-			<div class="col-sm-1">
-				<h2 class="or">OR</h2>
-			</div>
-			<div class="col-sm-4">
-				<div class="signup-form">
-					<!--sign up form-->
-					<h2>New User Signup!</h2>
-					<form action="#">
-						<input type="text" placeholder="Name" />
-						<input type="email" placeholder="Email Address" />
-						<input type="password" placeholder="Password" />
-						<button type="submit" class="btn btn-default">Signup</button>
-					</form>
-				</div><!--/sign up form-->
-			</div>
-		</div>
-	</div>
-</section><!--/form-->
+    <div class="container">
+        <div class="row">
+            <!-- Login Form -->
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="login-form">
+                    <h2>Login to your account</h2>
+
+                    <!-- Hiển thị thông báo lỗi (nếu có) -->
+                    @if (ViewData["ErrorMessage"] != null)
+                    {
+                        <p style="color: red;">@ViewData["ErrorMessage"]</p>
+                    }
+
+                    <form asp-action="Login" asp-controller="User" method="post">
+                        <input type="text" name="TenDangNhap" placeholder="Tên đăng nhập" required />
+                        <input type="password" name="MatKhau" placeholder="Mật khẩu" required />
+                        <span>
+                            <input type="checkbox" class="checkbox" /> Keep me signed in
+                        </span>
+                        <button type="submit" class="btn btn-default">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="col-sm-1">
+                <h2 class="or">OR</h2>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="col-sm-4">
+                <div class="signup-form">
+                    <h2>New User Signup!</h2>
+
+                    <!-- Hiển thị thông báo thành công (nếu có) -->
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <p style="color: green;">@TempData["SuccessMessage"]</p>
+                    }
+
+                    <form asp-action="Signup" asp-controller="User" method="post">
+                        <input type="text" name="TenDangNhap" placeholder="Tên đăng nhập" required />
+                        <input type="password" name="MatKhau" placeholder="Mật khẩu" required />
+                        <input type="text" name="HoTen" placeholder="Họ và tên" required />
+                        <input type="email" name="Email" placeholder="Địa chỉ email" required />
+                        <input type="text" name="SoDienThoai" placeholder="Số điện thoại" required />
+
+                        <!-- Điều kiện: Nếu tài khoản là Khách Hàng -->
+                        <input type="text" name="DiaChi" placeholder="Địa chỉ" />
+
+                       
+                        <select name="loaiTaiKhoan" required>
+                            <option value="nhanvien">Nhân viên</option>
+                        </select>
+
+                        <button type="submit" class="btn btn-default">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
