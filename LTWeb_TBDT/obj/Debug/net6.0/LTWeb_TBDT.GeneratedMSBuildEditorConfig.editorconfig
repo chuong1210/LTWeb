@@ -9,103 +9,99 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LTWeb_TBDT
 build_property.RootNamespace = LTWeb_TBDT
-build_property.ProjectDir = C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\
+build_property.ProjectDir = C:\Users\chuon\source\repos\LTWeb_TBDT\LTWeb_TBDT\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT
+build_property.MSBuildProjectDirectory = C:\Users\chuon\source\repos\LTWeb_TBDT\LTWeb_TBDT
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Cart/Checkout.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Cart/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Cart/Index.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Category/Index.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Home/Index.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Manager/CreateProduct.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Manager/CreateProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxDcmVhdGVQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Manager/EditProduct.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Manager/EditProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxFZGl0UHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Manager/Index.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Manager/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Product/Detail.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Product/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Product/Index.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Shared/Components/DanhMuc/Default.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Shared/Components/DanhMuc/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRGFuaE11Y1xEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Shared/Error.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Shared/_FooterPartial.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Shared/_FooterPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Shared/_HeaderPartial.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Shared/_HeaderPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Shared/_LayoutLogin.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Shared/_LayoutLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Shared/_LayoutManager.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Shared/_LayoutManager.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRNYW5hZ2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Shared/_SidebarPartial.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Shared/_SidebarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlYmFyUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/User/Index.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/User/Login.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/User/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/_ViewImports.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/_ViewStart.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anh Khoa/Documents/GitHub/LTWeb/LTWeb_TBDT/Views/Shared/_Layout.cshtml]
+[C:/Users/chuon/source/repos/LTWeb_TBDT/LTWeb_TBDT/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a4tlbhrtg4

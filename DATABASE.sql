@@ -1,4 +1,5 @@
-﻿CREATE DATABASE BanThietBiDienTu
+﻿
+CREATE DATABASE BanThietBiDienTu
 go
 use BanThietBiDienTu
 go

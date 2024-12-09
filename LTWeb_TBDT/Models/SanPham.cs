@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.SymbolStore;
+﻿using LTWeb_TBDT.Data;
+using System.Diagnostics.SymbolStore;
 
 namespace LTWeb_TBDT.Models
 {
@@ -21,8 +22,9 @@ namespace LTWeb_TBDT.Models
         public string HinhAnh { get => hinhAnh; set => hinhAnh = value; }
         public int MaNSX { get => maNSX; set => maNSX = value; }
         public int MaDanhMuc { get => maDanhMuc; set => maDanhMuc = value; }
+		public DanhMuc DanhMuc { get; set; }
 
-        public SanPham() { }
+		public SanPham() { }
 
 
         public SanPham(int masp, string tensp, string mota, double giaban, int slt, string hinhanh, int mansx, int madanhmuc)

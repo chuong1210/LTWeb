@@ -1,24 +1,33 @@
 ﻿using System.Diagnostics;
+using LTWeb_TBDT.Data;
 using LTWeb_TBDT.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace LTWeb_TBDT.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+		private readonly BanThietBiDienTuContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger, BanThietBiDienTuContext context)
         {
             _logger = logger;
-        }
+			_context = context;
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+		}
 
-        public IActionResult Privacy()
+		public async Task<IActionResult> Index()
+		{
+			List<Data.SanPham> products = await _context.SanPhams
+					 .Include(s => s.MaNhaSanXuatNavigation)
+					 .Include(s => s.MaDanhMucNavigation)
+					 .ToListAsync();
+
+			return View(products);
+		}
+		public IActionResult Privacy()
         {
             return View();
         }

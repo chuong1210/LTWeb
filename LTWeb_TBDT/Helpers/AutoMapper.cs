@@ -1,5 +1,4 @@
-﻿using LTWeb_TBDT.Data;
-
+﻿
 namespace LTWeb_TBDT.Helpers
 {
 	public class AutoMapperProfile 

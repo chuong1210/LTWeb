@@ -18,30 +18,23 @@ namespace LTWeb_TBDT.Controllers
 			return View();
 		}
 
-		public IActionResult Detail()
-		{
-			return View();
-		}
+	
 
 
 	
-
-		// GET: Products
 		public async Task<IActionResult> Index1()
 		{
 			return View(await _context.SanPhams.ToListAsync());
 		}
 
 		// GET: Products/Details/5
-		public async Task<IActionResult> Details(int? id)
+		public async Task<IActionResult> Detail(int id)
 		{
-			if (id == null)
-			{
-				return NotFound();
-			}
-
 			var product = await _context.SanPhams
-				.FirstOrDefaultAsync(m => m.MaSanPham == id);
+				.Include(s => s.MaNhaSanXuatNavigation)
+				.Include(s => s.MaDanhMucNavigation)
+				.FirstOrDefaultAsync(s => s.MaSanPham == id);
+
 			if (product == null)
 			{
 				return NotFound();
@@ -49,7 +42,6 @@ namespace LTWeb_TBDT.Controllers
 
 			return View(product);
 		}
-
 		// GET: Products/Create
 		public IActionResult Create()
 		{
@@ -59,7 +51,7 @@ namespace LTWeb_TBDT.Controllers
 		// POST: Products/Create
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Create([Bind("Id,Name,Price,Description")] SanPham product)
+		public async Task<IActionResult> Create([Bind("Id,Name,Price,Description")] SanPham product,IFormFile formFile)
 		{
 			if (ModelState.IsValid)
 			{
@@ -67,6 +59,7 @@ namespace LTWeb_TBDT.Controllers
 				await _context.SaveChangesAsync();
 				return RedirectToAction(nameof(Index));
 			}
+		//	product.Hinh = MyUltil.UploadImage(formFile, "KhachHang");
 
 
 			//if (ModelState.IsValid)
@@ -80,7 +73,6 @@ namespace LTWeb_TBDT.Controllers
 			//		kh.VaiTro = 0;
 			//		if (urlImage != null)
 			//		{
-			//			kh.Hinh = MyUtil.UploadImage(urlImage, "KhachHang");
 			//		}
 			//		db.Add(kh);
 			//		db.SaveChanges();
