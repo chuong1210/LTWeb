@@ -23,7 +23,7 @@
     <div class="row mb-4">
         <div class="col-md-8">
             <!-- Nút thêm khách hàng -->
-            <a href="@Url.Action("CreateCustomer", "KhachHang")" class="btn btn-success">
+            <a href="@Url.Action("CreateKhachHang", "KhachHang")" class="btn btn-success">
                 <i class="fas fa-plus"></i> Thêm Khách Hàng
             </a>
         </div>
@@ -73,12 +73,12 @@
                             <td>
                                 <div class="d-flex justify-content-around">
                                     <!-- Nút sửa -->
-                                    <a href="@Url.Action("EditCustomer", "KhachHang", new { id = item.MaKhachHang })" class="btn btn-warning btn-sm">
+                                    <a href="@Url.Action("EditKhachHang", "KhachHang", new { id = item.MaKhachHang })" class="btn btn-warning btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
 
                                     <!-- Nút xóa -->
-                                    <form asp-action="DeleteCustomer" asp-controller="KhachHang" method="post" onsubmit="return confirm('Bạn có chắc chắn muốn xóa khách hàng này?');" style="display:inline;">
+                                    <form asp-action="DeleteKhachHang" asp-controller="KhachHang" method="post" onsubmit="return confirm('Bạn có chắc chắn muốn xóa khách hàng này?');" style="display:inline;">
                                         <input type="hidden" name="id" value="@item.MaKhachHang" />
                                         <button type="submit" class="btn btn-danger btn-sm">
                                             <i class="fas fa-trash-alt"></i>

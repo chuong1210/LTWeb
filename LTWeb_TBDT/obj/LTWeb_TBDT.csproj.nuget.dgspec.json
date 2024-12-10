@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desktop\\Github\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj": {}
+    "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj": {}
   },
   "projects": {
-    "D:\\Desktop\\Github\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj": {
+    "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desktop\\Github\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
+        "projectUniqueName": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
         "projectName": "LTWeb_TBDT",
-        "projectPath": "D:\\Desktop\\Github\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Desktop\\Github\\LTWeb\\LTWeb_TBDT\\obj\\",
+        "projectPath": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
+        "packagesPath": "C:\\Users\\Anh Khoa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Anh Khoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }
