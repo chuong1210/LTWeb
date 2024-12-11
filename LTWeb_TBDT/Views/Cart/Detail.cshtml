@@ -1,31 +1,62 @@
 ﻿@model LTWeb_TBDT.Data.HoaDon
 
-<h2>Chi tiết hóa đơn</h2>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-4 text-center text-primary">Chi tiết hóa đơn</h2>
 
-<p><strong>Ngày đặt hàng:</strong> @Model.NgayDatHang.ToString("dd/MM/yyyy")</p>
-<p><strong>Tổng tiền:</strong> @String.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:C0}", Model.TongTien)</p>
+            @if (Model == null)
+            {
+                <div class="alert alert-warning text-center">Không tìm thấy thông tin hóa đơn.</div>
+            }
+            else
+            {
+                <div class="card shadow-sm mb-4 border-primary">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Thông tin đơn hàng</h4>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Ngày đặt hàng:</strong> <span class="text-muted">@Model.NgayDatHang.ToString("dd/MM/yyyy")</span></p>
+                        <p><strong>Tổng tiền:</strong> <span class="text-success">@String.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:C0}", Model.TongTien)</span></p>
+                        <p><strong>Trạng thái:</strong> <span class="badge bg-info text-dark">@Model.TrangThai</span></p>
+                    </div>
+                </div>
 
-<p><strong>Trạng thái:</strong> @Model.TrangThai</p>
+                <div class="card shadow-sm border-secondary">
+                    <div class="card-header bg-secondary text-white">
+                        <h4 class="mb-0">Danh sách sản phẩm trong đơn hàng</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover table-bordered">
+                            <thead class="table-dark">
+                                <tr class="text-center">
+                                    <th>Sản phẩm</th>
+                                    <th>Số lượng</th>
+                                    <th>Đơn giá</th>
+                                    <th>Tổng tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.ChiTietHoaDons)
+                                {
+                                    <tr>
+                                        <td>@item.MaSanPhamNavigation.TenSanPham</td>
+                                        <td class="text-center">@item.SoLuong</td>
+                                        <td class="text-end">@String.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:C0}", item.GiaBan)</td>
+                                        <td class="text-end text-success">@String.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:C0}", item.ThanhTien)</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-<h3>Danh sách sản phẩm đã mua</h3>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Tên sản phẩm</th>
-            <th>Giá</th>
-            <th>Số lượng</th>
-            <th>Thành tiền</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.ChiTietHoaDons)
-        {
-            <tr>
-                <td>@item.MaSanPhamNavigation.TenSanPham</td>
-                <td>@item.GiaBan.ToString("C")</td>
-                <td>@item.SoLuong</td>
-                <td>@String.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:C0}", @item.ThanhTien)</td>
-            </tr>
-        }
-    </tbody>
-</table>
+                <div class="mt-4 text-center">
+                    <a class="btn btn-outline-primary btn-lg" href="@Url.Action("History", "Cart")">
+                        <i class="fas fa-arrow-left"></i> Quay lại lịch sử mua hàng
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
