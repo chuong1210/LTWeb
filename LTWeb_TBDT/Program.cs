@@ -16,6 +16,13 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 builder.Services.AddSession();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+	.AddCookie(options =>
+	{
+		options.LoginPath = "/User/Login";
+		options.AccessDeniedPath = "/User/AccessDenied";
+	});
+
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminPolicy", policy => policy.RequireRole("Admin"));
@@ -23,12 +30,7 @@ builder.Services.AddAuthorization(options =>
     // options.AddPolicy("VipOnly", policy => policy.RequireRole("UserVip1", "UserVip2")); gom nhóm
 });
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/KhachHang/DangNhap";
-        options.AccessDeniedPath = "/AccessDenied";
-    });
+
 
 var app = builder.Build();
 

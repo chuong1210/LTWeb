@@ -1,5 +1,78 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
+<style>
+    body {
+        background-color: #f3f4f6;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+        background-color: #ffffff;
+        border: none;
+    }
+
+    .form-control {
+        border-radius: 0.5rem;
+        box-shadow: none;
+    }
+
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+        }
+
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .rounded-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a.text-decoration-none:hover {
+        text-decoration: underline;
+    }
+
+</style>
+<section class="vh-100" style="background-color: #f3f4f6;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+                <div class="card shadow-lg p-4 rounded-4 border-0">
+                    <div class="card-body">
+
+                        <h2 class="fw-bold mb-4 text-center">Đăng nhập</h2>
+
+                        <form asp-action="Login" asp-controller="User" method="post">
+                            <!-- Tên đăng nhập -->
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control rounded-3" id="TenDangNhap" name="TenDangNhap" placeholder="Tên đăng nhập" required>
+                                <label for="TenDangNhap">Tên đăng nhập</label>
+                            </div>
+
+                            <!-- Mật khẩu -->
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control rounded-3" id="MatKhau" name="MatKhau" placeholder="Mật khẩu" required>
+                                <label for="MatKhau">Mật khẩu</label>
+                            </div>
+
+                            <!-- Nút đăng nhập -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg rounded-3">Đăng nhập</button>
+                            </div>
+
+                            <!-- Quên mật khẩu -->
+                            <p class="text-center mt-3">
+                                <a href="#!" class="text-decoration-none">Quên mật khẩu?</a>
+                            </p>
+                        </form>
+
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

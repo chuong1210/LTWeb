@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Shopping Cart";
     Layout = "_Layout";
+    @using System.Globalization
+
 }
 
 <section id="cart_items">
@@ -37,8 +39,10 @@
                                 <p>Web ID: @item.MaSanPham</p>
                             </td>
                             <td class="cart_price">
-                                <p>@item.GiaBan.ToString("C")</p>
+                                <p>@item.GiaBan.ToString("C0", new CultureInfo("vi-VN"))</p>
+
                             </td>
+
                             <td class="cart_quantity">
                                 <div class="cart_quantity_button">
                                     <form asp-controller="Cart" asp-action="AddToCart" method="post">
@@ -52,7 +56,8 @@
                             </td>
 
                             <td class="cart_total">
-                                <p class="cart_total_price">@item.ThanhTien.ToString("C")</p>
+                                <p class="cart_total_price">@item.ThanhTien.ToString("C0", new CultureInfo("vi-VN"))</p>
+
                             </td>
                             <td class="cart_delete">
                                 <a class="cart_quantity_delete" href="@Url.Action("RemoveCart", "Cart", new { maSanPham = item.MaSanPham })"><i class="fa fa-times"></i></a>
@@ -71,10 +76,10 @@
             <div class="col-sm-6">
                 <div class="total_area">
                     <ul>
-                        <li>Cart Sub Total <span>@Model.Sum(i => i.ThanhTien).ToString("C")</span></li>
-                        <li>Eco Tax <span>$0</span></li>
-                        <li>Shipping Cost <span>Free</span></li>
-                        <li>Total <span>@Model.Sum(i => i.ThanhTien).ToString("C")</span></li>
+                        <li>Tổng tiền đơn hàng <span>@Model.Sum(i => i.ThanhTien).ToString("C0", new CultureInfo("vi-VN"))</span></li>
+                        <li>Tax <span>0VNĐ</span></li>
+                        <li>Phí vận chuyển <span>Miễn phí</span></li>
+                        <li>Tổng tiền <span>@Model.Sum(i => i.ThanhTien).ToString("C0", new CultureInfo("vi-VN"))</span></li>
                     </ul>
                     <a class="btn btn-default update" href="@Url.Action("Index", "Product")">Continue Shopping</a>
                     <a asp-controller="Cart" class="btn btn-default check_out" asp-action="Checkout">Thanh toán</a>

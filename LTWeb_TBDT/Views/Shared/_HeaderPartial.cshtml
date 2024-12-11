@@ -1,75 +1,81 @@
 ﻿<style>
-	.header-bottom .search_box,
-	.header-bottom .fa-shopping-bag {
-		display: inline-block; /* Đảm bảo các phần tử nằm cạnh nhau */
-		vertical-align: middle; /* Căn giữa theo chiều dọc */
-	}
+    .header-bottom .search_box,
+    .header-bottom .fa-shopping-bag,
+    .header-bottom .user-info {
+        display: inline-block;
+        vertical-align: middle;
+    }
 
-	.header-bottom .fa-shopping-bag {
-		font-size: 30px; /* Điều chỉnh kích thước icon */
-	}
+    .header-bottom .fa-shopping-bag {
+        font-size: 30px;
+    }
 
-	.header-bottom .search_box input {
-		height: 35px; /* Điều chỉnh chiều cao để đồng nhất với nút giỏ hàng */
-	}
+    .header-bottom .search_box input {
+        height: 35px;
+    }
+
+    .header-bottom .user-info {
+        margin-right: 10px;
+    }
+
+    .header-bottom .login-btn {
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #FE980F;
+        border-radius: 5px;
+    }
 </style>
+
 <header id="header">
-	<!--header-->
-		<!--header_top-->
-		
+    <div class="header-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a asp-controller="Home" asp-action="Index" class="active">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a asp-controller="Category">Categories</a></li>
+                                    <li><a asp-controller="Product" asp-action="Detail">Product Details</a></li>
+                                    <li><a asp-controller="Cart" asp-action="Checkout">Checkout</a></li>
+                                    <li><a asp-controller="Cart" asp-action="Index">Cart</a></li>
+                                    <li><a asp-controller="User" asp-action="Logout">Logout</a></li>
+                                </ul>
+                            </li>
+                       
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="col-sm-3">
+           @*           <div class="search_box pull-right">
+                         <input type="text" placeholder="Search" />
+                     </div> *@
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="user-info">
+                            <span>Welcome, @User.Identity.Name!</span>
+                        </div>
+                        <a asp-controller="Cart" asp-action="Index"><i class="fa fa-shopping-bag"></i></a>
+                    }
+                    else
+                    {
+                        <a asp-controller="User" asp-action="Login" class="login-btn">Login</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-	<div class="header-bottom">
-		<!--header-bottom-->
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-9">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
-					<div class="mainmenu pull-left">
-						<ul class="nav navbar-nav collapse navbar-collapse">
-							<li><a asp-controller="Home" asp-action="Index" class="active">Home</a></li>
-							<li class="dropdown">
-								<a href="#">Shop<i class="fa fa-angle-down"></i></a>
-								<ul role="menu" class="sub-menu">
-									<li><a asp-controller="Category">Categories</a></li>
-									<li><a asp-controller="Product" asp-action="Detail">Product Details</a></li>
-									<li><a asp-controller="Cart" asp-action="Checkout">Checkout</a></li>
-									<li><a asp-controller="Cart" asp-action="Index">Cart</a></li>
-									<li><a asp-controller="User" asp-action="Login">Login</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">Blog<i class="fa fa-angle-down"></i></a>
-								<ul role="menu" class="sub-menu">
-									<li><a href="blog.html">Blog List</a></li>
-									<li><a href="blog-single.html">Blog Single</a></li>
-								</ul>
-							</li>
-							<li><a href="404.html">404</a></li>
-							<li><a href="contact-us.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			
-				<div class="col-sm-2">
-					<div class="search_box pull-right">
-						<input type="text" placeholder="Search" />
-					</div>
-				</div>
-
-				<div class="col-sm-1">
- @* 					<a href="@Url.Action("Index", "Cart")"><i class="fa fa-shopping-bag"></i> Đặt Hàng</a>
-  *@
-					<a asp-controller="Cart" asp-action="Index"><i class="fa fa-shopping-bag"></i></a>
-				</div>
-			</div>
-		</div>
-	</div><!--/header-bottom-->
-</header><!--/header-->

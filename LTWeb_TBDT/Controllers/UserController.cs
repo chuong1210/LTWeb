@@ -1,8 +1,12 @@
 ﻿using LTWeb_TBDT.Data;
 using LTWeb_TBDT.Helpers;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
+using LTWeb_TBDT.Models;
 
 namespace LTWeb_TBDT.Controllers
 {
@@ -23,40 +27,93 @@ namespace LTWeb_TBDT.Controllers
 		{
 			return View();
 		}
-		[HttpPost]
-		public async Task<IActionResult> Login(string tenDangNhap, string matKhau)
-		{
-			using (SqlConnection connection = new SqlConnection(connectionString))
-			{
-				await connection.OpenAsync();
 
-				// Câu lệnh SQL với tham số
-				string query = "SELECT * FROM TaiKhoan WHERE TenDangNhap = @TenDangNhap AND MatKhau = @MatKhau";
-				SqlCommand command = new SqlCommand(query, connection);
+        [HttpPost]
+        public async Task<IActionResult> Login(string tenDangNhap, string matKhau)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
 
-				// Thêm giá trị cho tham số
-				command.Parameters.AddWithValue("@TenDangNhap", tenDangNhap ?? string.Empty); // Kiểm tra null
-				command.Parameters.AddWithValue("@MatKhau", matKhau ?? string.Empty);
+                // Truy vấn tài khoản
+                string query = "SELECT * FROM TaiKhoan WHERE TenDangNhap = @TenDangNhap AND MatKhau = @MatKhau";
+                SqlCommand command = new SqlCommand(query, connection);
 
-				SqlDataReader reader = await command.ExecuteReaderAsync();
+                command.Parameters.AddWithValue("@TenDangNhap", tenDangNhap ?? string.Empty);
+                command.Parameters.AddWithValue("@MatKhau", matKhau ?? string.Empty);
 
-				if (reader.HasRows)
-				{
-					// Xử lý khi tìm thấy tài khoản
-					TempData["SuccessMessage"] = "Đăng nhập thành công!";
-                    return RedirectToAction("Index", "Home");
+                SqlDataReader reader = await command.ExecuteReaderAsync();
+
+                if (reader.HasRows && await reader.ReadAsync())
+                {
+                    string loaiTaiKhoan = reader["LoaiTaiKhoan"].ToString();
+                    int maTaiKhoan = Convert.ToInt32(reader["MaTaiKhoan"]);
+                    int? maKhachHang = null;
+
+                    // Nếu là Khách hàng, truy vấn MaKhachHang từ bảng KhachHang
+                    if (loaiTaiKhoan == "KhachHang")
+                    {
+                        reader.Close(); // Đóng reader trước khi thực hiện truy vấn mới
+
+                        string khachHangQuery = "SELECT MaKhachHang FROM KhachHang WHERE MaTaiKhoan = @MaTaiKhoan";
+                        SqlCommand khachHangCommand = new SqlCommand(khachHangQuery, connection);
+                        khachHangCommand.Parameters.AddWithValue("@MaTaiKhoan", maTaiKhoan);
+
+                        SqlDataReader khachHangReader = await khachHangCommand.ExecuteReaderAsync();
+                        if (khachHangReader.HasRows && await khachHangReader.ReadAsync())
+                        {
+                            maKhachHang = Convert.ToInt32(khachHangReader["MaKhachHang"]);
+                        }
+                    }
+
+                    // Tạo Claims cho người dùng
+                    var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, tenDangNhap),
+                new Claim(ClaimTypes.Role, loaiTaiKhoan),
+                new Claim("MaTaiKhoan", maTaiKhoan.ToString())
+            };
+
+                    if (maKhachHang.HasValue)
+                    {
+                        claims.Add(new Claim("MaKhachHang", maKhachHang.Value.ToString()));
+                    }
+
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var authProperties = new AuthenticationProperties
+                    {
+                        IsPersistent = true // Duy trì phiên đăng nhập
+                    };
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                        new ClaimsPrincipal(claimsIdentity), authProperties);
+
+                    TempData["SuccessMessage"] = "Đăng nhập thành công!";
+
+                    // Điều hướng dựa trên loại tài khoản
+                    if (loaiTaiKhoan == "Admin")
+                    {
+                        return RedirectToAction("Index", "Manager");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
                 }
-				else
-				{
-					// Xử lý khi không tìm thấy tài khoản
-					ViewData["ErrorMessage"] = "Sai tên đăng nhập hoặc mật khẩu.";
-					return View();
-				}
-			}
+                else
+                {
+                    ViewData["ErrorMessage"] = "Sai tên đăng nhập hoặc mật khẩu.";
+                    return View();
+                }
+            }
+        }
 
+        public async Task<IActionResult> Logout()
+		{
+			await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+			return RedirectToAction("Login", "User");
 		}
-
-        public IActionResult Signup()
+		public IActionResult Signup()
         {
             return View(); // Hiển thị form đăng ký
         }
