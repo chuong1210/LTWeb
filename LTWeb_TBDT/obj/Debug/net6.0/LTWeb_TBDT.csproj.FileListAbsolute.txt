@@ -138,6 +138,7 @@ D:\Desktop\Github\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\refint\LTWeb_TBDT.dll
 D:\Desktop\Github\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.pdb
 D:\Desktop\Github\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.genruntimeconfig.cache
 D:\Desktop\Github\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\ref\LTWeb_TBDT.dll
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 D:\Desktop\Github\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\MessagePack.dll
@@ -321,3 +322,145 @@ D:\Desktop\Github\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalys
 D:\Desktop\Github\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Desktop\Github\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 >>>>>>> Stashed changes
+=======
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\appsettings.json
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.staticwebassets.runtime.json
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.exe
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.deps.json
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.runtimeconfig.json
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.pdb
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.csproj.AssemblyReference.cache
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.AssemblyInfoInputs.cache
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.AssemblyInfo.cs
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.csproj.CoreCompileInputs.cache
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.RazorAssemblyInfo.cache
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.RazorAssemblyInfo.cs
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.sourcelink.json
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets\msbuild.LTWeb_TBDT.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets\msbuild.build.LTWeb_TBDT.props
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.LTWeb_TBDT.props
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.LTWeb_TBDT.props
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\scopedcss\bundle\LTWeb_TBDT.styles.css
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\scopedcss\projectbundle\LTWeb_TBDT.bundle.scp.css
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.csproj.Up2Date
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\refint\LTWeb_TBDT.dll
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.pdb
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.genruntimeconfig.cache
+C:\Users\Anh Khoa\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\ref\LTWeb_TBDT.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\appsettings.json
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.staticwebassets.runtime.json
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.exe
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.deps.json
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.runtimeconfig.json
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\LTWeb_TBDT.pdb
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Humanizer.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.csproj.AssemblyReference.cache
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.AssemblyInfoInputs.cache
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.AssemblyInfo.cs
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.csproj.CoreCompileInputs.cache
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.RazorAssemblyInfo.cache
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.RazorAssemblyInfo.cs
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.sourcelink.json
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets\msbuild.LTWeb_TBDT.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets\msbuild.build.LTWeb_TBDT.props
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.LTWeb_TBDT.props
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.LTWeb_TBDT.props
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\scopedcss\bundle\LTWeb_TBDT.styles.css
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\scopedcss\projectbundle\LTWeb_TBDT.bundle.scp.css
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.csproj.Up2Date
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\refint\LTWeb_TBDT.dll
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.pdb
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.genruntimeconfig.cache
+C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\ref\LTWeb_TBDT.dll
+>>>>>>> main

@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LTWeb_TBDT.Controllers
 {
-    public class KhachHangController : Controller
+    public class NhanVienController : Controller
     {
         private readonly string connectionString;
 
-        public KhachHangController(IConfiguration configuration)
+        public NhanVienController(IConfiguration configuration)
         {
             connectionString = configuration.GetConnectionString("DefaultConnection");
         }
@@ -23,43 +23,42 @@ namespace LTWeb_TBDT.Controllers
                 connection.Open();
 
                 // Thêm điều kiện tìm kiếm nếu có
-                string query = "SELECT * FROM KhachHang WHERE HoTen LIKE @SearchQuery";
+                string query = "SELECT * FROM NhanVien WHERE HoTen LIKE @SearchQuery";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@SearchQuery", "%" + (searchQuery ?? string.Empty) + "%");
 
 
                 SqlDataReader reader = command.ExecuteReader();
 
-                List<KhachHang> khachHangs = new List<KhachHang>();
+                List<NhanVien> nhanViens = new List<NhanVien>();
 
                 while (reader.Read())
                 {
-                    int maKhachHang = Convert.ToInt32(reader["MaKhachHang"]);
+                    int maNhanVien = Convert.ToInt32(reader["MaNhanVien"]);
                     string hoTen = reader["HoTen"].ToString();
-                    string diaChi = reader["DiaChi"].ToString();
+                    DateTime ngaySinh = Convert.ToDateTime(reader["ngaySinh"]);
                     string soDienThoai = reader["SoDienThoai"].ToString();
                     string email = reader["Email"].ToString();
                     int maTaiKhoan = Convert.ToInt32(reader["MaTaiKhoan"]);
 
-                    KhachHang khachhang = new KhachHang(maKhachHang, hoTen, diaChi, soDienThoai, email, maTaiKhoan);
-                    khachHangs.Add(khachhang);
+                    NhanVien nhanVien = new NhanVien(maNhanVien, hoTen, ngaySinh, soDienThoai, email, maTaiKhoan);
+                    nhanViens.Add(nhanVien);
                 }
                 ViewData["SearchQuery"] = searchQuery;
-                ViewData["SuccessMessage"] = TempData["SuccessMessage"]; 
+                ViewData["SuccessMessage"] = TempData["SuccessMessage"];
 
-                return View(khachHangs);
+                return View(nhanViens);
             }
         }
 
-        // GET: KhachHang/CreateKhachHang
-        public IActionResult CreateKhachHang()
+        public IActionResult CreateNhanVien()
         {
             return View();
         }
 
         // POST: KhachHang/CreateKhachHang
         [HttpPost]
-        public IActionResult CreateKhachHang(KhachHang khachHang)
+        public IActionResult CreateNhanVien(NhanVien nhanVien)
         {
             if (ModelState.IsValid)
             {
@@ -67,68 +66,65 @@ namespace LTWeb_TBDT.Controllers
                 {
                     connection.Open();
 
-                    string query = "INSERT INTO KhachHang (HoTen, DiaChi, SoDienThoai, Email, MaTaiKhoan) VALUES( @HoTen, @DiaChi, @SoDienThoai, @Email, @MaTaiKhoan)";
+                    string query = "INSERT INTO NhanVien (HoTen, NgaySinh, SoDienThoai, Email, MaTaiKhoan) VALUES( @HoTen, @NgaySinh, @SoDienThoai, @Email, @MaTaiKhoan)";
                     SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@HoTen", khachHang.HoTen);
-                    command.Parameters.AddWithValue("@DiaChi", khachHang.DiaChi);
-                    command.Parameters.AddWithValue("@SoDienThoai", khachHang.SoDienThoai);
-                    command.Parameters.AddWithValue("@Email", khachHang.Email);
-                    command.Parameters.AddWithValue("@MaTaiKhoan", khachHang.MaTaiKhoan);
+                    command.Parameters.AddWithValue("@HoTen", nhanVien.HoTen);
+                    command.Parameters.AddWithValue("@NgaySinh", nhanVien.NgaySinh);
+                    command.Parameters.AddWithValue("@SoDienThoai", nhanVien.SoDienThoai);
+                    command.Parameters.AddWithValue("@Email", nhanVien.Email);
+                    command.Parameters.AddWithValue("@MaTaiKhoan", nhanVien.MaTaiKhoan);
 
                     command.ExecuteNonQuery();
 
-                    TempData["SuccessMessage"] = "Thêm khách hàng thành công!";
+                    TempData["SuccessMessage"] = "Thêm nhân viên thành công!";
                 }
                 return RedirectToAction("Index");
             }
 
-            return View(khachHang);
+            return View(nhanVien);
         }
 
-        public IActionResult EditKhachHang(int id)
+        public IActionResult EditNhanVien(int id)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                // Lấy thông tin khách hàng theo ID
-                string queryKH = "SELECT * FROM KhachHang WHERE MaKhachHang = @Id";
+                string queryKH = "SELECT * FROM NhanVien WHERE MaNhanVien = @Id";
                 SqlCommand commandKH = new SqlCommand(queryKH, connection);
                 commandKH.Parameters.AddWithValue("@Id", id);
 
                 SqlDataReader readerKH = commandKH.ExecuteReader();
-                KhachHang khachHang = null;
+                NhanVien nhanVien = null;
 
                 if (readerKH.Read())
                 {
-                    khachHang = new KhachHang
+                    nhanVien = new NhanVien
                     {
-                        MaKhachHang = Convert.ToInt32(readerKH["MaKhachHang"]),
+                        MaNhanVien = Convert.ToInt32(readerKH["MaNhanVien"]),
                         HoTen = readerKH["HoTen"].ToString(),
                         Email = readerKH["Email"].ToString(),
                         SoDienThoai = readerKH["SoDienThoai"].ToString(),
-                        DiaChi = readerKH["DiaChi"].ToString()
+                        NgaySinh = Convert.ToDateTime(readerKH["NgaySinh"].ToString())
                     };
                 }
                 readerKH.Close();
 
-                // Kiểm tra khách hàng có tồn tại
-                if (khachHang == null)
+                if (nhanVien == null)
                 {
-                    return NotFound("Khách hàng không tồn tại.");
+                    return NotFound("Nhân viên không tồn tại.");
                 }
 
-                return View(khachHang);
+                return View(nhanVien);
             }
         }
 
-
         [HttpPost]
-        public IActionResult EditKhachHang(KhachHang khachHang)
+        public IActionResult EditNhanVien(NhanVien nhanVien)
         {
-            if (khachHang == null || khachHang.MaKhachHang <= 0)
+            if (nhanVien == null || nhanVien.MaNhanVien <= 0)
             {
-                TempData["ErrorMessage"] = "Thông tin khách hàng không hợp lệ!";
+                TempData["ErrorMessage"] = "Thông tin nhân viên không hợp lệ!";
                 return RedirectToAction("Index");
             }
 
@@ -136,26 +132,25 @@ namespace LTWeb_TBDT.Controllers
             {
                 connection.Open();
 
-                // Cập nhật thông tin khách hàng
-                string query = "UPDATE KhachHang SET HoTen = @HoTen, Email = @Email, " +
-                               "SoDienThoai = @SoDienThoai, DiaChi = @DiaChi WHERE MaKhachHang = @MaKhachHang";
+                string query = "UPDATE NhanVien SET HoTen = @HoTen, Email = @Email, " +
+                               "SoDienThoai = @SoDienThoai, NgaySinh = @NgaySinh WHERE MaNhanVien = @MaNhanVien";
                 SqlCommand command = new SqlCommand(query, connection);
 
-                command.Parameters.AddWithValue("@HoTen", khachHang.HoTen);
-                command.Parameters.AddWithValue("@Email", khachHang.Email);
-                command.Parameters.AddWithValue("@SoDienThoai", khachHang.SoDienThoai);
-                command.Parameters.AddWithValue("@DiaChi", khachHang.DiaChi);
-                command.Parameters.AddWithValue("@MaKhachHang", khachHang.MaKhachHang);
+                command.Parameters.AddWithValue("@HoTen", nhanVien.HoTen);
+                command.Parameters.AddWithValue("@Email", nhanVien.Email);
+                command.Parameters.AddWithValue("@SoDienThoai", nhanVien.SoDienThoai);
+                command.Parameters.AddWithValue("@NgaySinh", nhanVien.NgaySinh);
+                command.Parameters.AddWithValue("@MaNhanVien", nhanVien.MaNhanVien);
 
                 int rowsAffected = command.ExecuteNonQuery();
 
                 if (rowsAffected > 0)
                 {
-                    TempData["SuccessMessage"] = "Thông tin khách hàng đã được cập nhật thành công!";
+                    TempData["SuccessMessage"] = "Thông tin nhân viên đã được cập nhật thành công!";
                 }
                 else
                 {
-                    TempData["ErrorMessage"] = "Có lỗi xảy ra khi cập nhật thông tin khách hàng!";
+                    TempData["ErrorMessage"] = "Có lỗi xảy ra khi cập nhật thông tin nhân viên!";
                 }
             }
 
@@ -163,7 +158,7 @@ namespace LTWeb_TBDT.Controllers
         }
 
         [HttpPost]
-        public IActionResult DeleteKhachHang(int id)
+        public IActionResult Delete(int id)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -172,7 +167,7 @@ namespace LTWeb_TBDT.Controllers
                     connection.Open();
 
                     // Câu lệnh SQL để xóa sản phẩm theo ID
-                    string query = "DELETE FROM KhachHang WHERE MaKhachHang = @Id";
+                    string query = "DELETE FROM NhanVien WHERE MaNhanVien = @Id";
                     SqlCommand command = new SqlCommand(query, connection);
 
                     // Thêm tham số ID vào câu lệnh SQL
@@ -183,11 +178,11 @@ namespace LTWeb_TBDT.Controllers
                     // Kiểm tra xem có bản ghi nào bị ảnh hưởng
                     if (rowsAffected > 0)
                     {
-                        TempData["SuccessMessage"] = "Xóa khách hàng thành công!";
+                        TempData["SuccessMessage"] = "Xóa nhân viên thành công!";
                     }
                     else
                     {
-                        TempData["ErrorMessage"] = "Không tìm thấy khách hàng để xóa.";
+                        TempData["ErrorMessage"] = "Không tìm thấy nhân viên để xóa.";
                     }
                 }
                 catch (Exception ex)

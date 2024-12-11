@@ -1,0 +1,42 @@
+﻿@model LTWeb_TBDT.Models.KhachHang
+
+@{
+    ViewData["Title"] = "Sửa Thông Tin Khách Hàng";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center text-primary">@ViewData["Title"]</h1>
+
+    <form method="post" enctype="multipart/form-data" class="p-4 border rounded bg-light shadow-sm">
+        <input type="hidden" name="MaKhachHang" value="@Model.MaKhachHang" />
+
+        <div class="form-group mb-3">
+            <label for="HoTen" class="form-label">HoTen</label>
+            <input type="text" id="HoTen" name="HoTen" class="form-control" value="@Model.HoTen" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <input type="email" id="Email" name="Email" class="form-control" value="@Model.Email" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="SoDienThoai" class="form-label">Số Điện Thoại</label>
+            <input type="tel" id="SoDienThoai" name="SoDienThoai" class="form-control" value="@Model.SoDienThoai" required />
+        </div>
+
+        <div class="form-group mb-4">
+            <label for="DiaChi" class="form-label">Địa Chỉ</label>
+            <textarea id="DiaChi" name="DiaChi" class="form-control" rows="4" required>@Model.DiaChi</textarea>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success px-4">
+                <i class="fa fa-save"></i> Lưu Thay Đổi
+            </button>
+            <a href="@Url.Action("Index", "KhachHang")" class="btn btn-secondary px-4">
+                <i class="fa fa-arrow-left"></i> Quay lại
+            </a>
+        </div>
+    </form>
+</div>
