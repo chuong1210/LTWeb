@@ -187,7 +187,7 @@ namespace LTWeb_TBDT.Controllers
                     }
                     else
                     {
-                        TempData["ErrorMessage"] = "Không tìm thấy khách hàn để xóa.";
+                        TempData["ErrorMessage"] = "Không tìm thấy khách hàng để xóa.";
                     }
                 }
                 catch (Exception ex)

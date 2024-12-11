@@ -105,7 +105,7 @@ namespace LTWeb_TBDT.Controllers
                         HoTen = readerKH["HoTen"].ToString(),
                         Email = readerKH["Email"].ToString(),
                         SoDienThoai = readerKH["SoDienThoai"].ToString(),
-                        NgaySinh = Convert.ToDateTime(readerKH["DiaChi"].ToString())
+                        NgaySinh = Convert.ToDateTime(readerKH["NgaySinh"].ToString())
                     };
                 }
                 readerKH.Close();
@@ -133,24 +133,61 @@ namespace LTWeb_TBDT.Controllers
                 connection.Open();
 
                 string query = "UPDATE NhanVien SET HoTen = @HoTen, Email = @Email, " +
-                               "SoDienThoai = @SoDienThoai, DiaChi = @DiaChi WHERE MaKhachHang = @MaKhachHang";
+                               "SoDienThoai = @SoDienThoai, NgaySinh = @NgaySinh WHERE MaNhanVien = @MaNhanVien";
                 SqlCommand command = new SqlCommand(query, connection);
 
-                command.Parameters.AddWithValue("@HoTen", khachHang.HoTen);
-                command.Parameters.AddWithValue("@Email", khachHang.Email);
-                command.Parameters.AddWithValue("@SoDienThoai", khachHang.SoDienThoai);
-                command.Parameters.AddWithValue("@DiaChi", khachHang.DiaChi);
-                command.Parameters.AddWithValue("@MaKhachHang", khachHang.MaKhachHang);
+                command.Parameters.AddWithValue("@HoTen", nhanVien.HoTen);
+                command.Parameters.AddWithValue("@Email", nhanVien.Email);
+                command.Parameters.AddWithValue("@SoDienThoai", nhanVien.SoDienThoai);
+                command.Parameters.AddWithValue("@NgaySinh", nhanVien.NgaySinh);
+                command.Parameters.AddWithValue("@MaNhanVien", nhanVien.MaNhanVien);
 
                 int rowsAffected = command.ExecuteNonQuery();
 
                 if (rowsAffected > 0)
                 {
-                    TempData["SuccessMessage"] = "Thông tin khách hàng đã được cập nhật thành công!";
+                    TempData["SuccessMessage"] = "Thông tin nhân viên đã được cập nhật thành công!";
                 }
                 else
                 {
-                    TempData["ErrorMessage"] = "Có lỗi xảy ra khi cập nhật thông tin khách hàng!";
+                    TempData["ErrorMessage"] = "Có lỗi xảy ra khi cập nhật thông tin nhân viên!";
+                }
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Câu lệnh SQL để xóa sản phẩm theo ID
+                    string query = "DELETE FROM NhanVien WHERE MaNhanVien = @Id";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    // Thêm tham số ID vào câu lệnh SQL
+                    command.Parameters.AddWithValue("@Id", id);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    // Kiểm tra xem có bản ghi nào bị ảnh hưởng
+                    if (rowsAffected > 0)
+                    {
+                        TempData["SuccessMessage"] = "Xóa nhân viên thành công!";
+                    }
+                    else
+                    {
+                        TempData["ErrorMessage"] = "Không tìm thấy nhân viên để xóa.";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    TempData["ErrorMessage"] = "Đã xảy ra lỗi: " + ex.Message;
                 }
             }
 
