@@ -1,6 +1,16 @@
 ﻿@using LTWeb_TBDT.Data;
 @model List<LTWeb_TBDT.Data.SanPham>
 
+	<style>
+	.productinfo p {
+		white-space: nowrap; /* Ngăn chặn xuống dòng */
+		overflow: hidden; /* Ẩn phần nội dung vượt quá khung */
+		text-overflow: ellipsis; /* Hiển thị dấu "..." nếu nội dung bị cắt */
+		max-width: 100%; /* Giới hạn chiều rộng tối đa của thẻ */
+	}
+
+
+	</style>
 	<section id="slider">
 		<!--slider-->
 		<div class="container">
