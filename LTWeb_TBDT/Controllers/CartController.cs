@@ -84,7 +84,6 @@ namespace LTWeb_TBDT.Controllers
             return RedirectToAction("Index");
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult CheckOut()
         {

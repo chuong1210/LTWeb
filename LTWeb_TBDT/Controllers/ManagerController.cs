@@ -15,7 +15,11 @@ namespace LTWeb_TBDT.Controllers
             connectionString = configuration.GetConnectionString("DefaultConnection");
         }
         // Action Index
-        public IActionResult Index(string searchQuery)
+        public IActionResult Login()
+        {
+            return View();
+        }
+            public IActionResult Index(string searchQuery)
         {
             // Kết nối tới CSDL và lấy dữ liệu
             using (SqlConnection connection = new SqlConnection(connectionString))
