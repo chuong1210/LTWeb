@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj": {}
+    "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj": {
+    "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
+        "projectUniqueName": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
         "projectName": "LTWeb_TBDT",
-        "projectPath": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
-        "packagesPath": "C:\\Users\\Anh Khoa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\obj\\",
+        "projectPath": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
+        "packagesPath": "C:\\Users\\MinhLuan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Anh Khoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MinhLuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

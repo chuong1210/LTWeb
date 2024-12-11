@@ -1,34 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\",
+  "WorkspaceRootPath": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\controllers\\khachhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\minhluan\\documents\\github\\ltweb\\ltweb_tbdt\\controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\minhluan\\documents\\github\\ltweb\\ltweb_tbdt\\controllers\\khachhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\controllers\\khachhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\views\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\minhluan\\documents\\github\\ltweb\\ltweb_tbdt\\views\\nhanvien\\createnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\nhanvien\\createnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\views\\khachhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\khachhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\minhluan\\documents\\github\\ltweb\\ltweb_tbdt\\views\\nhanvien\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\nhanvien\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\views\\khachhang\\editkhachhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\minhluan\\documents\\github\\ltweb\\ltweb_tbdt\\views\\khachhang\\editkhachhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\khachhang\\editkhachhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\views\\khachhang\\createkhachhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\khachhang\\createkhachhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\anh khoa\\documents\\github\\ltweb\\ltweb_tbdt\\views\\manager\\editproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\views\\manager\\editproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,112 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1144,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "RelativeToolTip": "LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "CreateNhanVien.cshtml",
+              "DocumentMoniker": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\NhanVien\\CreateNhanVien.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\NhanVien\\CreateNhanVien.cshtml",
+              "ToolTip": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\NhanVien\\CreateNhanVien.cshtml",
+              "RelativeToolTip": "LTWeb_TBDT\\Views\\NhanVien\\CreateNhanVien.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T17:06:56.619Z",
+              "WhenOpened": "2024-12-11T05:07:40.568Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ManagerController.cs",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "RelativeToolTip": "LTWeb_TBDT\\Controllers\\ManagerController.cs",
-              "ViewState": "AQIAACUBAAAAAAAAAAAAADsBAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T08:23:30.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EditKhachHang.cshtml",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\KhachHang\\EditKhachHang.cshtml",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\KhachHang\\EditKhachHang.cshtml",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\KhachHang\\EditKhachHang.cshtml",
-              "RelativeToolTip": "LTWeb_TBDT\\Views\\KhachHang\\EditKhachHang.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\NhanVien\\Index.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\NhanVien\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\NhanVien\\Index.cshtml",
+              "RelativeToolTip": "LTWeb_TBDT\\Views\\NhanVien\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T16:38:19.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreateKhachHang.cshtml",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\KhachHang\\CreateKhachHang.cshtml",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\KhachHang\\CreateKhachHang.cshtml",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\KhachHang\\CreateKhachHang.cshtml",
-              "RelativeToolTip": "LTWeb_TBDT\\Views\\KhachHang\\CreateKhachHang.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAIwC0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T16:17:43.063Z",
+              "WhenOpened": "2024-12-11T04:55:35.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NhanVienController.cs",
+              "DocumentMoniker": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\NhanVienController.cs",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Controllers\\NhanVienController.cs",
+              "ToolTip": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\NhanVienController.cs",
+              "RelativeToolTip": "LTWeb_TBDT\\Controllers\\NhanVienController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAswIYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T04:50:07.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "KhachHangController.cs",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\KhachHangController.cs",
+              "DocumentMoniker": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\KhachHangController.cs",
               "RelativeDocumentMoniker": "LTWeb_TBDT\\Controllers\\KhachHangController.cs",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\KhachHangController.cs",
+              "ToolTip": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Controllers\\KhachHangController.cs",
               "RelativeToolTip": "LTWeb_TBDT\\Controllers\\KhachHangController.cs",
-              "ViewState": "AQIAAKEAAAAAAAAAAAAswKUAAAAsAAAA",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAswKIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T08:10:15.445Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\KhachHang\\Index.cshtml",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\KhachHang\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\KhachHang\\Index.cshtml",
-              "RelativeToolTip": "LTWeb_TBDT\\Views\\KhachHang\\Index.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAFAAAABFAAAA",
+              "DocumentIndex": 4,
+              "Title": "EditKhachHang.cshtml",
+              "DocumentMoniker": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\KhachHang\\EditKhachHang.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\KhachHang\\EditKhachHang.cshtml",
+              "ToolTip": "C:\\Users\\MinhLuan\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\KhachHang\\EditKhachHang.cshtml",
+              "RelativeToolTip": "LTWeb_TBDT\\Views\\KhachHang\\EditKhachHang.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T08:49:02.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EditProduct.cshtml",
-              "DocumentMoniker": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\EditProduct.cshtml",
-              "RelativeDocumentMoniker": "LTWeb_TBDT\\Views\\Manager\\EditProduct.cshtml",
-              "ToolTip": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\Views\\Manager\\EditProduct.cshtml",
-              "RelativeToolTip": "LTWeb_TBDT\\Views\\Manager\\EditProduct.cshtml",
-              "ViewState": "AQIAADUAAAAAAAAAAAAwwFMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T16:42:00.653Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 1144,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2024-12-10T16:38:19.864Z"
             }
           ]
         }
