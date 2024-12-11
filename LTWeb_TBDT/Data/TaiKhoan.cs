@@ -5,7 +5,6 @@ namespace LTWeb_TBDT.Data
 {
     public partial class TaiKhoan
     {
-
         public TaiKhoan()
         {
             Admins = new HashSet<Admin>();

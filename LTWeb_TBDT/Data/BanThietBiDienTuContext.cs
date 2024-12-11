@@ -32,7 +32,7 @@ namespace LTWeb_TBDT.Data
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=USER\\MSSQLSERVER01;Database=BanThietBiDienTu;Persist Security Info=True;User ID=sa;Password=101204;Trust Server Certificate=True;Trusted_Connection=true");
+                optionsBuilder.UseSqlServer("Server=USER\\MSSQLSERVER01;Database=BanThietBiDienTu;User ID=sa;Password=101204;Trust Server Certificate=True");
             }
         }
 
@@ -41,7 +41,7 @@ namespace LTWeb_TBDT.Data
             modelBuilder.Entity<Admin>(entity =>
             {
                 entity.HasKey(e => e.MaAdmin)
-                    .HasName("PK__Admin__49341E38FF5B4347");
+                    .HasName("PK__Admin__49341E38A8E7E2E7");
 
                 entity.ToTable("Admin");
 
@@ -54,7 +54,7 @@ namespace LTWeb_TBDT.Data
             modelBuilder.Entity<ChiTietHoaDon>(entity =>
             {
                 entity.HasKey(e => new { e.MaHoaDon, e.MaSanPham })
-                    .HasName("PK__ChiTietH__4CF2A579D2DA5004");
+                    .HasName("PK__ChiTietH__4CF2A579F10FFA81");
 
                 entity.ToTable("ChiTietHoaDon");
 
@@ -80,7 +80,7 @@ namespace LTWeb_TBDT.Data
             modelBuilder.Entity<DanhMuc>(entity =>
             {
                 entity.HasKey(e => e.MaDanhMuc)
-                    .HasName("PK__DanhMuc__B375088716F192A7");
+                    .HasName("PK__DanhMuc__B3750887D356A157");
 
                 entity.ToTable("DanhMuc");
 
@@ -109,7 +109,7 @@ namespace LTWeb_TBDT.Data
             modelBuilder.Entity<KhachHang>(entity =>
             {
                 entity.HasKey(e => e.MaKhachHang)
-                    .HasName("PK__KhachHan__88D2F0E5CEFECF00");
+                    .HasName("PK__KhachHan__88D2F0E5672AA59C");
 
                 entity.ToTable("KhachHang");
 
@@ -117,9 +117,9 @@ namespace LTWeb_TBDT.Data
 
                 entity.Property(e => e.Email).HasMaxLength(100);
 
-                entity.Property(e => e.SoDienThoai).HasMaxLength(15);
+                entity.Property(e => e.HoTen).HasMaxLength(100);
 
-                entity.Property(e => e.TenKhachHang).HasMaxLength(100);
+                entity.Property(e => e.SoDienThoai).HasMaxLength(15);
 
                 entity.HasOne(d => d.MaTaiKhoanNavigation)
                     .WithMany(p => p.KhachHangs)
@@ -130,7 +130,7 @@ namespace LTWeb_TBDT.Data
             modelBuilder.Entity<NhaSanXuat>(entity =>
             {
                 entity.HasKey(e => e.MaNhaSanXuat)
-                    .HasName("PK__NhaSanXu__838C17A1CB300A4E");
+                    .HasName("PK__NhaSanXu__838C17A152F203E4");
 
                 entity.ToTable("NhaSanXuat");
 
@@ -146,17 +146,17 @@ namespace LTWeb_TBDT.Data
             modelBuilder.Entity<NhanVien>(entity =>
             {
                 entity.HasKey(e => e.MaNhanVien)
-                    .HasName("PK__NhanVien__77B2CA473B0847BE");
+                    .HasName("PK__NhanVien__77B2CA4700946649");
 
                 entity.ToTable("NhanVien");
 
                 entity.Property(e => e.Email).HasMaxLength(100);
 
+                entity.Property(e => e.HoTen).HasMaxLength(100);
+
                 entity.Property(e => e.NgaySinh).HasColumnType("date");
 
                 entity.Property(e => e.SoDienThoai).HasMaxLength(15);
-
-                entity.Property(e => e.TenNhanVien).HasMaxLength(100);
 
                 entity.HasOne(d => d.MaTaiKhoanNavigation)
                     .WithMany(p => p.NhanViens)
@@ -167,7 +167,7 @@ namespace LTWeb_TBDT.Data
             modelBuilder.Entity<SanPham>(entity =>
             {
                 entity.HasKey(e => e.MaSanPham)
-                    .HasName("PK__SanPham__FAC7442DC4C305D0");
+                    .HasName("PK__SanPham__FAC7442D2304C06A");
 
                 entity.ToTable("SanPham");
 
@@ -189,7 +189,7 @@ namespace LTWeb_TBDT.Data
             modelBuilder.Entity<TaiKhoan>(entity =>
             {
                 entity.HasKey(e => e.MaTaiKhoan)
-                    .HasName("PK__TaiKhoan__AD7C65296AF814DA");
+                    .HasName("PK__TaiKhoan__AD7C652988F82420");
 
                 entity.ToTable("TaiKhoan");
 
@@ -203,7 +203,7 @@ namespace LTWeb_TBDT.Data
             modelBuilder.Entity<TonKho>(entity =>
             {
                 entity.HasKey(e => e.MaSanPham)
-                    .HasName("PK__TonKho__FAC7442D17CBA4B5");
+                    .HasName("PK__TonKho__FAC7442D8EEE2EA2");
 
                 entity.ToTable("TonKho");
 

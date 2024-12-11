@@ -30,7 +30,7 @@ namespace LTWeb_TBDT.Controllers
         public IActionResult Index()
         {
             var user = User;
-            if (!user.IsInRole("User"))
+            if (!user.IsInRole("KhachHang"))
             {
                 // Trả về lỗi hoặc chuyển hướng đến trang không được phép
                 return Unauthorized();
@@ -181,7 +181,55 @@ namespace LTWeb_TBDT.Controllers
 
 
 
+         [Authorize(Roles = "KhachHang")]
+    public async Task<IActionResult> History()
+    {
+        // Lấy MaKhachHang từ tài khoản người dùng đã đăng nhập
+        var userId = User.Identity.Name;  // Lấy username của người dùng
+                                          //var customer = await db.KhachHangs
+                                          //                             .FirstOrDefaultAsync(kh => kh.MaTaiKhoan == (from tk in db.TaiKhoans
+                                          //                                                                         where tk.TenDangNhap == userId
+                                          //                                                                         select tk.MaTaiKhoan).FirstOrDefault());
+            var taiKhoan = await db.TaiKhoans
+                           .Where(tk => tk.TenDangNhap == userId)
+                           .Select(tk => tk.MaTaiKhoan)
+                           .FirstOrDefaultAsync();
+
+            var customer = await db.KhachHangs
+                                   .FirstOrDefaultAsync(kh => kh.MaTaiKhoan == taiKhoan);
 
 
+            if (customer == null)
+        {
+            return NotFound();
+        }
+
+        // Lấy danh sách các hóa đơn của khách hàng
+        var orders = await db.HoaDons
+                                    .Where(hd => hd.MaKhachHang == customer.MaKhachHang)
+                                    .OrderByDescending(hd => hd.NgayDatHang)  // Sắp xếp theo ngày đặt hàng giảm dần
+                                    .ToListAsync();
+
+        return View(orders);
     }
+
+    // Chi tiết hóa đơn, có thể xem chi tiết sản phẩm đã mua
+    [Authorize(Roles = "KhachHang")]
+    public async Task<IActionResult> Detail(int id)
+    {
+        var order = await db.HoaDons
+                                  .Include(hd => hd.ChiTietHoaDons)
+                                  .ThenInclude(cthd => cthd.MaSanPhamNavigation)
+                                  .FirstOrDefaultAsync(hd => hd.MaHoaDon == id);
+
+        if (order == null)
+        {
+            return NotFound();
+        }
+
+        return View(order);
+    }
+}
+
+    
 }

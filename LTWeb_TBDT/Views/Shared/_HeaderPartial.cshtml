@@ -26,7 +26,6 @@
         border-radius: 5px;
     }
 </style>
-
 <header id="header">
     <div class="header-bottom">
         <div class="container">
@@ -49,25 +48,45 @@
                                     <li><a asp-controller="Category">Categories</a></li>
                                     <li><a asp-controller="Product" asp-action="Detail">Product Details</a></li>
                                     <li><a asp-controller="Cart" asp-action="Checkout">Checkout</a></li>
-                                    <li><a asp-controller="Cart" asp-action="Index">Cart</a></li>
-                                    <li><a asp-controller="User" asp-action="Logout">Logout</a></li>
+
+                                    <!-- Ẩn Cart nếu người dùng có vai trò Admin -->
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        // Không hiển thị Cart nếu là Admin
+                                    }
+                                    else
+                                    {
+                                        <li><a asp-controller="Cart" asp-action="Index">Cart</a></li>
+                                    }
+
+                                    <!-- Ẩn nút Logout nếu người dùng chưa đăng nhập -->
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <li><a asp-controller="User" asp-action="Logout">Logout</a></li>
+                                    }
+
+                                    <!-- Thêm "Xem lịch sử mua hàng" nếu vai trò là KhachHang -->
+                                    @if (User.IsInRole("KhachHang"))
+                                    {
+                                        <li><a asp-controller="Cart" asp-action="History">Xem lịch sử mua hàng</a></li>
+                                    }
                                 </ul>
                             </li>
-                       
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-sm-3">
-           @*           <div class="search_box pull-right">
-                         <input type="text" placeholder="Search" />
-                     </div> *@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <div class="user-info">
                             <span>Welcome, @User.Identity.Name!</span>
                         </div>
-                        <a asp-controller="Cart" asp-action="Index"><i class="fa fa-shopping-bag"></i></a>
+                        <!-- Không hiển thị cart nếu là Admin -->
+                        @if (!User.IsInRole("Admin"))
+                        {
+                            <a asp-controller="Cart" asp-action="Index"><i class="fa fa-shopping-bag"></i></a>
+                        }
                     }
                     else
                     {
@@ -78,4 +97,3 @@
         </div>
     </div>
 </header>
-

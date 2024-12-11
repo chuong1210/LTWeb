@@ -1,0 +1,31 @@
+﻿@model LTWeb_TBDT.Data.HoaDon
+
+<h2>Chi tiết hóa đơn</h2>
+
+<p><strong>Ngày đặt hàng:</strong> @Model.NgayDatHang.ToString("dd/MM/yyyy")</p>
+<p><strong>Tổng tiền:</strong> @String.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:C0}", Model.TongTien)</p>
+
+<p><strong>Trạng thái:</strong> @Model.TrangThai</p>
+
+<h3>Danh sách sản phẩm đã mua</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ChiTietHoaDons)
+        {
+            <tr>
+                <td>@item.MaSanPhamNavigation.TenSanPham</td>
+                <td>@item.GiaBan.ToString("C")</td>
+                <td>@item.SoLuong</td>
+                <td>@String.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:C0}", @item.ThanhTien)</td>
+            </tr>
+        }
+    </tbody>
+</table>

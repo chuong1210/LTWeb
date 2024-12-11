@@ -64,3 +64,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+//Scaffold - DbContext "Server=USER\MSSQLSERVER01;Database=BanThietBiDienTu;User ID=sa;Password=101204;
+//Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer - OutputDir Data - Force

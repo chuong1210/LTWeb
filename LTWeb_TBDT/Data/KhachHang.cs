@@ -11,7 +11,7 @@ namespace LTWeb_TBDT.Data
         }
 
         public int MaKhachHang { get; set; }
-        public string TenKhachHang { get; set; } = null!;
+        public string HoTen { get; set; } = null!;
         public string? DiaChi { get; set; }
         public string? SoDienThoai { get; set; }
         public string? Email { get; set; }
