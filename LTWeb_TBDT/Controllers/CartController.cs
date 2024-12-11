@@ -10,6 +10,7 @@ using System.Linq;
 
 namespace LTWeb_TBDT.Controllers
 {
+
     public class CartController : Controller
     {
         private readonly BanThietBiDienTuContext db;
@@ -28,7 +29,12 @@ namespace LTWeb_TBDT.Controllers
         }
         public IActionResult Index()
         {
-
+            var user = User;
+            if (!user.IsInRole("User"))
+            {
+                // Trả về lỗi hoặc chuyển hướng đến trang không được phép
+                return Unauthorized();
+            }
             return View(Cart);
         }
 

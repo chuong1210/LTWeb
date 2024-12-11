@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using Microsoft.Data.SqlClient;
 using LTWeb_TBDT.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LTWeb_TBDT.Controllers
 {
+    [Authorize(Roles = "Admin")] // Chỉ cho phép người dùng thuộc vai trò "Admin" truy cập
+
     public class ManagerController : Controller
     {
         private readonly string connectionString;
@@ -19,7 +25,96 @@ namespace LTWeb_TBDT.Controllers
         {
             return View();
         }
-            public IActionResult Index(string searchQuery)
+        public IActionResult DashBoard()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(string tenDangNhap, string matKhau)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string ltk = "";
+                await connection.OpenAsync();
+
+                // Truy vấn tài khoản
+                string query = "SELECT * FROM TaiKhoan WHERE TenDangNhap = @TenDangNhap AND MatKhau = @MatKhau";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@TenDangNhap", tenDangNhap ?? string.Empty);
+                command.Parameters.AddWithValue("@MatKhau", matKhau ?? string.Empty);
+
+                SqlDataReader reader = await command.ExecuteReaderAsync();
+
+                if (reader.HasRows && await reader.ReadAsync())
+                {
+                    string loaiTaiKhoan = reader["LoaiTaiKhoan"].ToString();
+                    ltk = loaiTaiKhoan;
+                    int maTaiKhoan = Convert.ToInt32(reader["MaTaiKhoan"]);
+                    int? maKhachHang = null;
+
+                    // Nếu là Khách hàng, truy vấn MaKhachHang từ bảng KhachHang
+                    if (loaiTaiKhoan == "KhachHang")
+                    {
+                        reader.Close(); // Đóng reader trước khi thực hiện truy vấn mới
+
+                        string khachHangQuery = "SELECT MaKhachHang FROM KhachHang WHERE MaTaiKhoan = @MaTaiKhoan";
+                        SqlCommand khachHangCommand = new SqlCommand(khachHangQuery, connection);
+                        khachHangCommand.Parameters.AddWithValue("@MaTaiKhoan", maTaiKhoan);
+
+                        SqlDataReader khachHangReader = await khachHangCommand.ExecuteReaderAsync();
+                        if (khachHangReader.HasRows && await khachHangReader.ReadAsync())
+                        {
+                            maKhachHang = Convert.ToInt32(khachHangReader["MaKhachHang"]);
+                        }
+                    }
+
+                    // Tạo Claims cho người dùng
+                    var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, tenDangNhap),
+                new Claim(ClaimTypes.Role, loaiTaiKhoan),
+                new Claim("MaTaiKhoan", maTaiKhoan.ToString())
+            };
+
+                    if (maKhachHang.HasValue)
+                    {
+                        claims.Add(new Claim("MaKhachHang", maKhachHang.Value.ToString()));
+                    }
+
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var authProperties = new AuthenticationProperties
+                    {
+                        IsPersistent = true // Duy trì phiên đăng nhập
+                    };
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                        new ClaimsPrincipal(claimsIdentity), authProperties);
+
+                    TempData["SuccessMessage"] = "Đăng nhập thành công!";
+
+                    // Điều hướng dựa trên loại tài khoản
+                    if (loaiTaiKhoan == "Admin")
+                    {
+                        return RedirectToAction("Dashboard", "Manager");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                else
+                {
+                    ViewData["ErrorMessage"] = "Sai tên đăng nhập hoặc mật khẩu.";
+
+                    return RedirectToAction("Dashboard", "Manager");
+
+                }
+            }
+        }
+
+        public IActionResult Index(string searchQuery)
         {
             // Kết nối tới CSDL và lấy dữ liệu
             using (SqlConnection connection = new SqlConnection(connectionString))

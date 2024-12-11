@@ -7,6 +7,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using LTWeb_TBDT.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LTWeb_TBDT.Controllers
 {
@@ -18,21 +19,43 @@ namespace LTWeb_TBDT.Controllers
 		{
 			connectionString = configuration.GetConnectionString("DefaultConnection");
 		}
-		public IActionResult Index()
-		{
-			return View();
-		}
+        public IActionResult Index()
+        {
+            return View();
 
+            //    if (User.IsInRole("KhachHang"))
+            //    {
+            //    }
+
+            //    // Nếu không phải khách hàng, chuyển hướng đến trang quản lý cho manager
+            //    return RedirectToAction("Home", "Manager"); //
+            //}
+        }
 		public IActionResult Login()
 		{
-			return View();
-		}
+            if (User.Identity.IsAuthenticated)
+            {
+                // Nếu người dùng đã đăng nhập, kiểm tra vai trò
+                if (User.IsInRole("KhachHang"))
+                {
+                    return RedirectToAction("Index", "Home"); // Điều hướng về trang Home nếu là khách hàng
+                }
+                else if (User.IsInRole("Admin"))
+                {
+                    return RedirectToAction("DashBoard", "Manager"); // Điều hướng về trang quản lý nếu là admin
+                }
+            }
+
+            // Nếu chưa đăng nhập, chuyển đến trang đăng nhập
+            return View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> Login(string tenDangNhap, string matKhau)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
+                string ltk = "";
                 await connection.OpenAsync();
 
                 // Truy vấn tài khoản
@@ -47,6 +70,7 @@ namespace LTWeb_TBDT.Controllers
                 if (reader.HasRows && await reader.ReadAsync())
                 {
                     string loaiTaiKhoan = reader["LoaiTaiKhoan"].ToString();
+                    ltk = loaiTaiKhoan;
                     int maTaiKhoan = Convert.ToInt32(reader["MaTaiKhoan"]);
                     int? maKhachHang = null;
 
@@ -103,10 +127,13 @@ namespace LTWeb_TBDT.Controllers
                 else
                 {
                     ViewData["ErrorMessage"] = "Sai tên đăng nhập hoặc mật khẩu.";
-                    return View();
+                    
+                        return View();
+                  
                 }
             }
         }
+        [Authorize]
 
         public async Task<IActionResult> Logout()
 		{

@@ -1,0 +1,59 @@
+﻿<style>
+    .tiles {
+        display: flex; /* Đặt container thành flexbox */
+        flex-wrap: wrap; /* Cho phép các item xuống dòng khi hết không gian */
+        justify-content: space-between; /* Căn đều các phần tử */
+    }
+
+        .tiles .style1 {
+            flex: 1 1 calc(33.33% - 20px); /* Mỗi item chiếm 1/3 chiều rộng, trừ khoảng cách */
+            margin: 10px; /* Khoảng cách giữa các item */
+            box-sizing: border-box; /* Đảm bảo tính toán đúng kích thước */
+        }
+
+            .tiles .style1 img {
+                max-width: 100%; /* Đảm bảo hình ảnh không bị tràn */
+                height: auto; /* Tự động điều chỉnh chiều cao */
+            }
+
+</style>
+<div id="main">
+    <h1>Manager</h1>
+    <section class="tiles">
+        <article class="style1">
+            <span class="image">
+                <img src="~/images/SP008.jpg" alt="" width="300" height="325" />
+            </span>
+            <a asp-action="Index" asp-controller="Manager">
+                <h2>
+                    Quản lý sản phẩm
+                </h2>
+            </a>
+        </article>
+
+        <article class="style1">
+            <span class="image">
+                <img src="~/images/SP008.jpg" alt="" width="300" height="325" />
+            </span>
+            <a asp-action="Index" asp-controller="KhachHang">
+                <h2>
+                    Quản lý khách hàng
+                </h2>
+            </a>
+        </article>
+
+        @if (this.User.IsInRole("Admin"))
+        {
+            <article class="style1">
+                <span class="image">
+                    <img src="~/images/SP008.jpg" alt="" width="300" height="325" />
+                </span>
+                <a asp-action="Index" asp-controller="NhanVien">
+                    <h2>
+                        Quản lý nhân viên
+                    </h2>
+                </a>
+            </article>
+        }
+    </section>
+</div>

@@ -8,12 +8,14 @@
 	<ul class="nav nav-pills nav-stacked">
 
 
-
-		@foreach (var danhMuc in Model)
-		{
-			
-			<li><a href="#"> <span class="pull-right"></span>@danhMuc.TenNhaSanXuat</a></li>
-
-		}
+        @foreach (var nhaSanXuat in Model)
+        {
+            <li>
+                <!-- Link tới trang sản phẩm của nhà sản xuất -->
+                <a href="@Url.Action("Index", "Home", new { nhaSanXuatId = nhaSanXuat.MaNhaSanXuat })">
+                    <span class="pull-right"></span>@nhaSanXuat.TenNhaSanXuat
+                </a>
+            </li>
+        }
 	</ul>
 </div>
