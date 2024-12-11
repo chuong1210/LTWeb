@@ -54,6 +54,28 @@ namespace LTWeb_TBDT.Controllers
         // GET: KhachHang/CreateKhachHang
         public IActionResult CreateKhachHang()
         {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT MaTaiKhoan FROM TaiKhoan WHERE LoaiTaiKhoan = 'KhachHang'";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                List<SelectListItem> taiKhoanList = new List<SelectListItem>();
+
+                while (reader.Read())
+                {
+                    taiKhoanList.Add(new SelectListItem
+                    {
+                        Value = reader["MaTaiKhoan"].ToString(),
+                        Text = reader["MaTaiKhoan"].ToString()
+                    });
+                }
+
+                ViewBag.TaiKhoanList = taiKhoanList;
+            }
+
             return View();
         }
 
@@ -107,7 +129,8 @@ namespace LTWeb_TBDT.Controllers
                         HoTen = readerKH["HoTen"].ToString(),
                         Email = readerKH["Email"].ToString(),
                         SoDienThoai = readerKH["SoDienThoai"].ToString(),
-                        DiaChi = readerKH["DiaChi"].ToString()
+                        DiaChi = readerKH["DiaChi"].ToString(),
+                        MaTaiKhoan = Convert.ToInt32(readerKH["MaTaiKhoan"])
                     };
                 }
                 readerKH.Close();
@@ -117,6 +140,25 @@ namespace LTWeb_TBDT.Controllers
                 {
                     return NotFound("Khách hàng không tồn tại.");
                 }
+
+                // Lấy danh sách mã tài khoản có LoaiTaiKhoan là KhachHang
+                string queryTaiKhoan = "SELECT MaTaiKhoan FROM TaiKhoan WHERE LoaiTaiKhoan = 'KhachHang'";
+                SqlCommand commandTaiKhoan = new SqlCommand(queryTaiKhoan, connection);
+                SqlDataReader readerTaiKhoan = commandTaiKhoan.ExecuteReader();
+
+                List<SelectListItem> taiKhoanList = new List<SelectListItem>();
+                while (readerTaiKhoan.Read())
+                {
+                    taiKhoanList.Add(new SelectListItem
+                    {
+                        Value = readerTaiKhoan["MaTaiKhoan"].ToString(),
+                        Text = readerTaiKhoan["MaTaiKhoan"].ToString()
+                    });
+                }
+                readerTaiKhoan.Close();
+
+                // Truyền danh sách mã tài khoản vào ViewBag
+                ViewBag.TaiKhoanList = taiKhoanList;
 
                 return View(khachHang);
             }
@@ -138,13 +180,14 @@ namespace LTWeb_TBDT.Controllers
 
                 // Cập nhật thông tin khách hàng
                 string query = "UPDATE KhachHang SET HoTen = @HoTen, Email = @Email, " +
-                               "SoDienThoai = @SoDienThoai, DiaChi = @DiaChi WHERE MaKhachHang = @MaKhachHang";
+                               "SoDienThoai = @SoDienThoai, DiaChi = @DiaChi, MaTaiKhoan = @MaTaiKhoan WHERE MaKhachHang = @MaKhachHang";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 command.Parameters.AddWithValue("@HoTen", khachHang.HoTen);
                 command.Parameters.AddWithValue("@Email", khachHang.Email);
                 command.Parameters.AddWithValue("@SoDienThoai", khachHang.SoDienThoai);
                 command.Parameters.AddWithValue("@DiaChi", khachHang.DiaChi);
+                command.Parameters.AddWithValue("@MaTaiKhoan", khachHang.MaTaiKhoan);
                 command.Parameters.AddWithValue("@MaKhachHang", khachHang.MaKhachHang);
 
                 int rowsAffected = command.ExecuteNonQuery();

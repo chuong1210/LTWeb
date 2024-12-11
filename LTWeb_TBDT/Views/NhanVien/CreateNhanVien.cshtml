@@ -30,7 +30,13 @@
 
         <div class="form-group mb-3">
             <label for="MaTaiKhoan" class="form-label">Mã Tài Khoản</label>
-            <input type="number" id="MaTaiKhoan" name="MaTaiKhoan" class="form-control" placeholder="Nhập mã tài khoản" required />
+            <select id="MaTaiKhoan" name="MaTaiKhoan" class="form-control" required>
+                <option value="">-- Chọn mã tài khoản --</option>
+                @foreach (var item in ViewBag.TaiKhoanList)
+                {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
         </div>
 
         <div class="d-flex justify-content-between">
