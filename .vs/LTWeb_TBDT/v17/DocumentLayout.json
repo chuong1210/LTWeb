@@ -199,10 +199,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|c:\\users\\chuon\\source\\repos\\ltweb_tbdt\\ltweb_tbdt\\data\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AB01429-5F2B-4871-99D7-66EBB327447D}|LTWeb_TBDT\\LTWeb_TBDT.csproj|solutionrelative:ltweb_tbdt\\data\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C3DE4AC-8E5D-4AC1-B11E-9AA4DB88B0F1}|FILE_DB{4C3DE4AC-8E5D-4AC1-B11E-9AA4DB88B0F1}|C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\DATABASE.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{4C3DE4AC-8E5D-4AC1-B11E-9AA4DB88B0F1}|FILE_DB{4C3DE4AC-8E5D-4AC1-B11E-9AA4DB88B0F1}|solutionrelative:DATABASE.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -248,8 +244,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-11T12:10:52.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:10:52.473Z"
             },
             {
               "$type": "Document",
@@ -261,8 +256,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\LTWeb_TBDT.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-11T13:23:16.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:23:16.2Z"
             },
             {
               "$type": "Document",
@@ -274,8 +268,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Shared\\_HeaderPartial.cshtml",
               "ViewState": "AgIAACoAAAAAAAAAAAAgwEYAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T12:51:58.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:51:58.188Z"
             },
             {
               "$type": "Document",
@@ -287,8 +280,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Controllers\\UserController.cs",
               "ViewState": "AgIAAGIAAAAAAAAAAAApwHUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T12:40:17.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:40:17.42Z"
             },
             {
               "$type": "Document",
@@ -300,8 +292,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Program.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAAAEQAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T12:22:12.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:22:12.166Z"
             },
             {
               "$type": "Document",
@@ -313,8 +304,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Cart\\Detail.cshtml",
               "ViewState": "AgIAAAEAAAAAAAAAAAAiwBsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T15:30:03.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T15:30:03.96Z"
             },
             {
               "$type": "Document",
@@ -324,7 +314,7 @@
               "RelativeDocumentMoniker": "LTWeb_TBDT\\Controllers\\CartController.cs",
               "ToolTip": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\Controllers\\CartController.cs",
               "RelativeToolTip": "LTWeb_TBDT\\Controllers\\CartController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCAAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwDMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T12:12:37.109Z",
               "EditorCaption": ""
@@ -339,20 +329,18 @@
               "RelativeToolTip": "LTWeb_TBDT\\Controllers\\KhachHangController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T13:51:48.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:51:48.483Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "DATABASE.sql ",
+              "Title": "DATABASE.sql",
               "DocumentMoniker": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\DATABASE.sql",
               "RelativeDocumentMoniker": "DATABASE.sql",
               "ToolTip": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\DATABASE.sql",
               "RelativeToolTip": "DATABASE.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-12-11T12:41:01.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:41:01.216Z"
             },
             {
               "$type": "Document",
@@ -364,8 +352,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Cart\\History.cshtml",
               "ViewState": "AgIAAAEAAAAAAAAAAAAgwBsAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T15:28:36.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T15:28:36.052Z"
             },
             {
               "$type": "Document",
@@ -377,8 +364,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Manager\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T14:35:22.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T14:35:22.401Z"
             },
             {
               "$type": "Document",
@@ -390,8 +376,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwBoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T12:48:02.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:48:02.193Z"
             },
             {
               "$type": "Document",
@@ -403,8 +388,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Controllers\\NhanVienController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:11:06.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T14:11:06.326Z"
             },
             {
               "$type": "Document",
@@ -416,8 +400,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Manager\\DashBoard.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T14:35:50.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T14:35:50.578Z"
             },
             {
               "$type": "Document",
@@ -451,8 +434,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.402\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
               "ViewState": "AgIAAHAAAAAAAAAAAABBwNoBAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-12-11T15:01:00.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T15:01:00.45Z"
             },
             {
               "$type": "Document",
@@ -497,8 +479,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\ViewComponents\\NhaSanXuatViewComponent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T13:13:12.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:13:12.504Z"
             },
             {
               "$type": "Document",
@@ -510,8 +491,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Controllers\\ManagerController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAwBsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T12:29:04.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:29:04.876Z"
             },
             {
               "$type": "Document",
@@ -523,8 +503,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Shared\\Components\\DanhMuc\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T12:47:49.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:47:49.177Z"
             },
             {
               "$type": "Document",
@@ -536,8 +515,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Manager\\Login.cshtml",
               "ViewState": "AgIAACEAAAAAAAAAAIBJwC8AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T12:29:39.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:29:39.657Z"
             },
             {
               "$type": "Document",
@@ -549,8 +527,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Shared\\Components\\NhaSanXuat\\Default.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:25:26.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T14:25:26.099Z"
             },
             {
               "$type": "Document",
@@ -562,8 +539,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Shared\\Components\\NhaSanXuat\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T13:14:55.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:14:55.206Z"
             },
             {
               "$type": "Document",
@@ -575,8 +551,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAFkAAAAAAAAAAAAgwHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T14:21:08.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T14:21:08.457Z"
             },
             {
               "$type": "Document",
@@ -588,8 +563,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Cart\\Checkout.cshtml",
               "ViewState": "AgIAAJkAAAAAAAAAAIBJwBoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T12:12:17.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:12:17.179Z"
             },
             {
               "$type": "Document",
@@ -612,8 +586,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Shared\\_FooterPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T13:04:35.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:04:35.117Z"
             },
             {
               "$type": "Document",
@@ -625,8 +598,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Cart\\ThanhToan.cshtml",
               "ViewState": "AgIAAHsAAAAAAAAAAAAgwJwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T13:37:23.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:37:23.579Z"
             },
             {
               "$type": "Document",
@@ -638,8 +610,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Cart\\Index.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAIBJwE4AAAB6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T13:09:05.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:09:05.317Z"
             },
             {
               "$type": "Document",
@@ -651,8 +622,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\ViewComponents\\DanhMucViewComponent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T13:12:54.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:12:54.662Z"
             },
             {
               "$type": "Document",
@@ -664,8 +634,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Shared\\_SidebarPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T13:14:04.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:14:04.692Z"
             },
             {
               "$type": "Document",
@@ -677,8 +646,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T12:47:46.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:47:46.318Z"
             },
             {
               "$type": "Document",
@@ -690,8 +658,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Shared\\_LayoutManager.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T13:05:57.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T13:05:57.68Z"
             },
             {
               "$type": "Document",
@@ -703,8 +670,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\wwwroot\\checkout.html",
               "ViewState": "AgIAAEkAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-12-11T12:35:49.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:35:49.539Z"
             },
             {
               "$type": "Document",
@@ -716,8 +682,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\wwwroot\\login.html",
               "ViewState": "AgIAAIIAAAAAAAAAAABBwCcBAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-12-11T12:29:48.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:29:48.003Z"
             },
             {
               "$type": "Document",
@@ -729,8 +694,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\User\\Login.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAIBJwBUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T12:21:11.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T12:21:11.557Z"
             },
             {
               "$type": "Document",
@@ -742,8 +706,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Views\\Category\\Index.cshtml",
               "ViewState": "AgIAAM4BAAAAAAAAAIBJwOIBAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T08:59:10.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:59:10.88Z"
             },
             {
               "$type": "Document",
@@ -755,8 +718,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Models\\NhanVien.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:59:05.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:59:05.656Z"
             },
             {
               "$type": "Document",
@@ -768,8 +730,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Models\\KhachHang.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:59:05.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:59:05.124Z"
             },
             {
               "$type": "Document",
@@ -781,8 +742,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Models\\CategoryModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:59:04.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:59:04.595Z"
             },
             {
               "$type": "Document",
@@ -794,8 +754,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Models\\CartItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:59:03.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:59:03.838Z"
             },
             {
               "$type": "Document",
@@ -807,8 +766,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Helpers\\StaticMethod.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:59:01.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:59:01.264Z"
             },
             {
               "$type": "Document",
@@ -820,8 +778,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Helpers\\SessionExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:58:59.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:58:59.195Z"
             },
             {
               "$type": "Document",
@@ -833,8 +790,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Helpers\\MyUltil.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:58:58.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:58:58.135Z"
             },
             {
               "$type": "Document",
@@ -846,8 +802,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Helpers\\AutoMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:58:57.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:58:57.47Z"
             },
             {
               "$type": "Document",
@@ -859,8 +814,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Data\\ChiTietHoaDon.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:58:51.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:58:51.846Z"
             },
             {
               "$type": "Document",
@@ -872,8 +826,7 @@
               "RelativeToolTip": "LTWeb_TBDT\\Data\\Admin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:58:49.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:58:49.239Z"
             }
           ]
         }
