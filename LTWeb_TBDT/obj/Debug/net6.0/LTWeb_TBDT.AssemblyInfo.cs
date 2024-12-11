@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LTWeb_TBDT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7f5568bd03b185031b8918bfa89a47488b9919a")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2732c9d1a0ad20cdb46ac2d65e3867eaf5224aff")]
->>>>>>> khoa_branch
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38aa79cdf475f5e0ac0cffd534cef6613f6131fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("LTWeb_TBDT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LTWeb_TBDT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

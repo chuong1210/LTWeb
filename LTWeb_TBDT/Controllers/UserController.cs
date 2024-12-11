@@ -117,7 +117,7 @@ namespace LTWeb_TBDT.Controllers
                     // Điều hướng dựa trên loại tài khoản
                     if (loaiTaiKhoan == "Admin")
                     {
-                        return RedirectToAction("Index", "Manager");
+                        return RedirectToAction("DashBoard", "Manager");
                     }
                     else
                     {

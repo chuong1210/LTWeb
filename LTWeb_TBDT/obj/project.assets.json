@@ -10557,16 +10557,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\chuon\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\Anh Khoa\\.nuget\\packages\\": {}
->>>>>>> khoa_branch
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
       "projectName": "LTWeb_TBDT",
       "projectPath": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
@@ -10575,16 +10570,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\chuon\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
-      "projectName": "LTWeb_TBDT",
-      "projectPath": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
-      "packagesPath": "C:\\Users\\Anh Khoa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anh Khoa\\Documents\\GitHub\\LTWeb\\LTWeb_TBDT\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\Anh Khoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> khoa_branch
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10662,11 +10647,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304\\RuntimeIdentifierGraph.json"
->>>>>>> khoa_branch
       }
     }
   }
