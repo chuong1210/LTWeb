@@ -10,15 +10,21 @@ using System.Linq;
 
 namespace LTWeb_TBDT.Controllers
 {
-	public class CartController : Controller
-	{
+    public class CartController : Controller
+    {
         private readonly BanThietBiDienTuContext db;
+        private readonly ConnectHoaDon _connectHoaDon;
+        private readonly ConnnectChiTietHoaDon _connectChiTietHoaDon;
+
 
         private const string CartSessionKey = "CartItems";
         public List<CartItem> Cart => HttpContext.Session.Get<List<CartItem>>(StaticMethod.CART_KEY) ?? new List<CartItem>();
-        public CartController(BanThietBiDienTuContext context)
+        public CartController(BanThietBiDienTuContext context, ConnectHoaDon connectHoaDon, ConnnectChiTietHoaDon connectChiTietHoaDon)
         {
             db = context;
+            _connectHoaDon = connectHoaDon;
+            _connectChiTietHoaDon = connectChiTietHoaDon;
+
         }
         public IActionResult Index()
         {
@@ -26,7 +32,7 @@ namespace LTWeb_TBDT.Controllers
             return View(Cart);
         }
 
-      
+
         public IActionResult AddToCart(int id, int quantity = 1)
 
         {
@@ -55,7 +61,7 @@ namespace LTWeb_TBDT.Controllers
                 {
                     MaSanPham = hangHoa.MaSanPham,
                     TenSanPham = hangHoa.TenSanPham,
-                    GiaBan = hangHoa.GiaBan ,
+                    GiaBan = hangHoa.GiaBan,
                     HinhAnh = hangHoa.HinhAnh ?? string.Empty,
                     SoLuong = quantity
                 };
@@ -63,7 +69,7 @@ namespace LTWeb_TBDT.Controllers
             }
             else
             {
-             //   item.SoLuong += quantity;
+                //   item.SoLuong += quantity;
                 item.SoLuong = quantity;
 
             }
@@ -84,17 +90,69 @@ namespace LTWeb_TBDT.Controllers
             return RedirectToAction("Index");
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult CheckOut()
         {
-            if (Cart.Count == 0)
+            // Lấy giỏ hàng từ session
+            List<CartItem> gioHangList = HttpContext.Session.Get<List<CartItem>>(StaticMethod.CART_KEY) ?? new List<CartItem>();
+
+            // Kiểm tra xem giỏ hàng có sản phẩm không
+            if (gioHangList == null || gioHangList.Count == 0)
             {
-                return Redirect("/"); // chuyển đến 1 url cụ thể
+                TempData["Error"] = "Không thể thanh toán vì giỏ hàng trống!";
+                return RedirectToAction("Index", "Home"); // Nếu giỏ hàng trống, chuyển về trang chủ
             }
-            return View(Cart);
+
+            double tongTien = (double)gioHangList.Sum(sp => sp.GiaBan * sp.SoLuong);
+
+            // Gửi giỏ hàng và tổng tiền sang view để hiển thị
+            ViewBag.TongTien = tongTien;
+            return View(gioHangList);
+        }
+        public IActionResult CheckOut(IFormCollection form)
+        {
+            List<CartItem> gioHangList = HttpContext.Session.Get<List<CartItem>>(StaticMethod.CART_KEY) ?? new List<CartItem>();
+
+            double totalAmount = (double)gioHangList.Sum(sp => sp.ThanhTien);
+
+
+            int? maTK = HttpContext.Session.GetInt32("MaTK");
+
+            HoaDon hoaDon = new HoaDon
+            {
+                NgayDatHang = DateTime.Now,
+                MaKhachHang = null,
+                TongTien = (decimal?)totalAmount,
+                TrangThai = null
+            };
+
+            _connectHoaDon.ThemHoaDon(hoaDon);
+
+            // Thêm chi tiết hóa đơn vào cơ sở dữ liệu
+            foreach (var item in gioHangList)
+            {
+                ChiTietHoaDon chiTietHoaDon = new ChiTietHoaDon
+                {
+                    MaHoaDon = hoaDon.MaHoaDon,
+                    MaSanPham = item.MaSanPham,
+                    SoLuong = item.SoLuong,
+                    GiaBan = item.GiaBan,
+                };
+                _connectChiTietHoaDon.ThemChiTietHoaDon(chiTietHoaDon);
+            }
+
+
+
+            HttpContext.Session.Remove(StaticMethod.CART_KEY);
+
+            TempData["Message"] = "Thanh toán thành công! Đơn hàng đã được tạo.";
+            return RedirectToAction("Index", "Home");
         }
 
-           
+
+
+
+
+
     }
 }

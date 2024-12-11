@@ -25,7 +25,7 @@
                             <span>
                                 <span>@Model.GiaBan.ToString("C")</span>
                                 <form method="post" action="@Url.Action("AddToCart", "Cart")">
-                                    <input type="hidden"  name="id" value="@Model.MaSanPham" />
+                                    <input type="hidden" name="id" value="@Model.MaSanPham" />
                                     <label>Quantity:</label>
                                     <input type="number" name="quantity" value="1" min="1" />
                                     <button type="submit" class="btn btn-fefault cart">
