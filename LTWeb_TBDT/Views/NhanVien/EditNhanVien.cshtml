@@ -44,6 +44,17 @@
             <input type="email" id="Email" name="Email" class="form-control" value="@Model.Email" required />
         </div>
 
+        <div class="form-group mb-3">
+            <label for="MaTaiKhoan" class="form-label">Mã Tài Khoản</label>
+            <select id="MaTaiKhoan" name="MaTaiKhoan" class="form-control" required>
+                <option value="">-- Chọn mã tài khoản --</option>
+                @foreach (var item in ViewBag.TaiKhoanList)
+                {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </div>
+
         <div class="d-flex justify-content-between">
             <button type="submit" class="btn btn-success px-4">
                 <i class="fa fa-save"></i> Cập Nhật
