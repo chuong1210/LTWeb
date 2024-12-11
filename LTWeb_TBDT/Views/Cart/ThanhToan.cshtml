@@ -1,0 +1,156 @@
+﻿@{
+    ViewData["Title"] = "Checkout";
+    Layout = "_Layout";
+}
+
+<section id="cart_items">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="active">Checkout</li>
+            </ol>
+        </div><!--/breadcrumbs-->
+
+        <div class="step-one">
+            <h2 class="heading">Step 1: Order Information</h2>
+        </div>
+
+        <div class="checkout-options">
+            <h3>Checkout as:</h3>
+            <ul class="nav">
+                <li>
+                    <label><input type="checkbox" disabled="disabled" checked="checked"> Register Account</label>
+                </li>
+                <li>
+                    <label><input type="checkbox"> Guest Checkout</label>
+                </li>
+            </ul>
+        </div><!--/checkout-options-->
+
+        <div class="register-req">
+            <p>Please register and checkout to access your order history, or proceed as a guest.</p>
+        </div><!--/register-req-->
+
+        <div class="shopper-informations">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="shopper-info">
+                        <p>Shopper Information</p>
+                        <form method="post" action="@Url.Action("PlaceOrder", "Checkout")">
+                            <input type="text" name="displayName" placeholder="Display Name" required />
+                            <input type="text" name="userName" placeholder="User Name" required />
+                            <input type="password" name="password" placeholder="Password" required />
+                            <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="bill-to">
+                        <p>Billing Information</p>
+                        <div class="form-one">
+                            <form>
+                                <input type="text" name="companyName" placeholder="Company Name" />
+                                <input type="text" name="email" placeholder="Email*" required />
+                                <input type="text" name="title" placeholder="Title" />
+                                <input type="text" name="firstName" placeholder="First Name*" required />
+                                <input type="text" name="middleName" placeholder="Middle Name" />
+                                <input type="text" name="lastName" placeholder="Last Name*" required />
+                                <input type="text" name="address1" placeholder="Address 1*" required />
+                                <input type="text" name="address2" placeholder="Address 2" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-payment">
+            <h2>Review & Payment</h2>
+        </div>
+
+        <div class="table-responsive cart_info">
+            <table class="table table-condensed">
+                <thead>
+                    <tr class="cart_menu">
+                        <td class="image">Item</td>
+                        <td class="description"></td>
+                        <td class="price">Price</td>
+                        <td class="quantity">Quantity</td>
+                        <td class="total">Total</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.CartItems) // Model.CartItems should hold the cart items
+                    {
+                        <tr>
+                            <td class="cart_product">
+                                <a href=""><img src="@item.HinhAnh" alt="@item.TenSanPham"></a>
+                            </td>
+                            <td class="cart_description">
+                                <h4><a href="">@item.TenSanPham</a></h4>
+                                <p>Web ID: @item.MaSanPham</p>
+                            </td>
+                            <td class="cart_price">
+                                <p>@item.GiaBan.ToString("C")</p>
+                            </td>
+                            <td class="cart_quantity">
+                                <div class="cart_quantity_button">
+                                    <a class="cart_quantity_up" href="#"> + </a>
+                                    <input class="cart_quantity_input" type="text" name="quantity" value="@item.SoLuong" autocomplete="off" size="2" />
+                                    <a class="cart_quantity_down" href="#"> - </a>
+                                </div>
+                            </td>
+                            <td class="cart_total">
+                                <p class="cart_total_price">@item.ThanhTien.ToString("C")</p>
+                            </td>
+                            <td class="cart_delete">
+                                <a class="cart_quantity_delete" href="#"><i class="fa fa-times"></i></a>
+                            </td>
+                        </tr>
+                    }
+
+                    <tr>
+                        <td colspan="4">&nbsp;</td>
+                        <td colspan="2">
+                            <table class="table table-condensed total-result">
+                                <tr>
+                                    <td>Cart Sub Total</td>
+                                    <td>@Model.CartTotal.ToString("C")</td>
+                                </tr>
+                                <tr>
+                                    <td>Exo Tax</td>
+                                    <td>@Model.Tax.ToString("C")</td>
+                                </tr>
+                                <tr class="shipping-cost">
+                                    <td>Shipping Cost</td>
+                                    <td>@Model.ShippingCost.ToString("C")</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td><span>@Model.TotalAmount.ToString("C")</span></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="payment-options">
+            <span>
+                <label><input type="checkbox" name="paymentOption" value="bankTransfer"> Direct Bank Transfer</label>
+            </span>
+            <span>
+                <label><input type="checkbox" name="paymentOption" value="checkPayment"> Check Payment</label>
+            </span>
+            <span>
+                <label><input type="checkbox" name="paymentOption" value="paypal"> Paypal</label>
+            </span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Place Order</button>
+    </div>
+</section>
