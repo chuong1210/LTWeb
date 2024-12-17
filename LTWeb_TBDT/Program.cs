@@ -1,22 +1,34 @@
-using LTWeb_TBDT.Data;
+﻿using LTWeb_TBDT.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using VNPAY.NET;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<VnpayPayment>(); // Đăng ký VnpayPayment
 
-// ??ng k� DbContext
+//builder.Services.AddScoped<VnpayPayment>(provider =>
+//{
+//    var config = provider.GetRequiredService<IConfiguration>();
+//    var tmnCode = config["Vnpay:TmnCode"];
+//    var hashSecret = config["Vnpay:HashSecret"];
+//    var baseUrl = config["Vnpay:BaseUrl"];
+//    var callbackUrl = config["Vnpay:CallbackUrl"];
+
+//    return new VnpayPayment();
+//});
+// ??ng kư DbContext
 builder.Services.AddDbContext<BanThietBiDienTuContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// ??ng k� c�c service ConnectHoaDon v� ConnectChiTietHoaDon
-builder.Services.AddScoped<ConnectHoaDon>();  // ??ng k� ConnectHoaDon
-builder.Services.AddScoped<ConnnectChiTietHoaDon>();  // ??ng k� ConnectChiTietHoaDon
+// ??ng kư các service ConnectHoaDon và ConnectChiTietHoaDon
+builder.Services.AddScoped<ConnectHoaDon>();  // ??ng kư ConnectHoaDon
+builder.Services.AddScoped<ConnnectChiTietHoaDon>();  // ??ng kư ConnectChiTietHoaDon
 
-// ??ng k� Session
+// ??ng kư Session
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -36,7 +48,7 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminPolicy", policy => policy.RequireRole("Admin"));
     options.AddPolicy("UserPolicy", policy => policy.RequireRole("User"));
-    // options.AddPolicy("VipOnly", policy => policy.RequireRole("UserVip1", "UserVip2")); gom nh�m
+    // options.AddPolicy("VipOnly", policy => policy.RequireRole("UserVip1", "UserVip2")); gom nhóm
 });
 
 
@@ -55,9 +67,37 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// Kiểm tra vai trò của người dùng và điều hướng đến trang tương ứng
+//app.Use(async (context, next) =>
+//{
+//    var user = context.User;
+//    var path = context.Request.Path.Value.ToLower();
+
+//    if (user.Identity.IsAuthenticated)
+//    {
+//        // Nếu người dùng là Admin và chưa ở trang Dashboard, chuyển hướng tới Dashboard
+//        if (user.IsInRole("Admin") && !path.Contains("/manager/dashboard"))
+//        {
+//            context.Response.Redirect("/Manager/Dashboard");
+//            return;
+//        }
+//        // Nếu người dùng không phải Admin và chưa ở trang Home, chuyển hướng tới Home
+//        else if (!user.IsInRole("Admin") && !path.Contains("/home/index"))
+//        {
+//            context.Response.Redirect("/Home/Index");
+//            return;
+//        }
+//    }
+
+//    await next(); // Tiến hành xử lý yêu cầu tiếp theo nếu không có chuyển hướng
+//});
+
+
 app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "default",

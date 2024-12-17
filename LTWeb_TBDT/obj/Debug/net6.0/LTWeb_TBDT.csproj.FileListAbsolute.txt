@@ -498,3 +498,4 @@ C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\refint\LTWe
 C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.pdb
 C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\LTWeb_TBDT.genruntimeconfig.cache
 C:\Users\MinhLuan\Documents\GitHub\LTWeb\LTWeb_TBDT\obj\Debug\net6.0\ref\LTWeb_TBDT.dll
+C:\Users\chuon\source\repos\LTWeb_TBDT\LTWeb_TBDT\bin\Debug\net6.0\VNPAY.NET.dll

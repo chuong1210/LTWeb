@@ -3768,6 +3768,25 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "VNPAY.NET/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/net6.0/VNPAY.NET.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/VNPAY.NET.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/Icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
       }
     }
   },
@@ -10544,6 +10563,21 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "VNPAY.NET/6.1.0": {
+      "sha512": "oHtHaO1aDVv9dMypCOK1PQg9muihj83BjnNvil2QtZDcJfTSV/4RNH8SEgtCdtIxzHknWrBEaWXb3W9pCxAoCg==",
+      "type": "package",
+      "path": "vnpay.net/6.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "content/Icon.ico",
+        "contentFiles/any/net6.0/Icon.ico",
+        "lib/net6.0/VNPAY.NET.dll",
+        "vnpay.net.6.1.0.nupkg.sha512",
+        "vnpay.net.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -10553,7 +10587,8 @@
       "Microsoft.EntityFrameworkCore >= 6.0.35",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.35",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.35",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.18"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.18",
+      "VNPAY.NET >= 6.1.0"
     ]
   },
   "packageFolders": {
@@ -10626,6 +10661,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[6.0.18, )"
+          },
+          "VNPAY.NET": {
+            "target": "Package",
+            "version": "[6.1.0, )"
           }
         },
         "imports": [

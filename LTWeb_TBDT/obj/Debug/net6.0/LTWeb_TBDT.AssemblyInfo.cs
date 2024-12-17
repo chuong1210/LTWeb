@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LTWeb_TBDT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0090666966db1d622b4330952eaba579b68de686")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c3b3e388a270dbb90419875f5a2c632ae9c8534")]
 [assembly: System.Reflection.AssemblyProductAttribute("LTWeb_TBDT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LTWeb_TBDT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

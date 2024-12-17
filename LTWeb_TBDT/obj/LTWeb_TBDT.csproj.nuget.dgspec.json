@@ -71,6 +71,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.18, )"
+            },
+            "VNPAY.NET": {
+              "target": "Package",
+              "version": "[6.1.0, )"
             }
           },
           "imports": [

@@ -34,7 +34,7 @@
                                 <a href=""><img src="~/images/@item.HinhAnh" alt="@item.TenSanPham" class="img-fluid" style="max-width: 110px;"></a>
                             </td>
                             <td class="cart_description">
-                                <h5><a href="">@item.TenSanPham</a></h5>
+                                <h5><a asp-controller="Product" asp-action="Detail" asp-route-id="@item.MaSanPham">@item.TenSanPham</a></h5>
                                 <p>Web ID: @item.MaSanPham</p>
                             </td>
                             <td class="cart_price">
@@ -44,6 +44,8 @@
                                 <div class="cart_quantity_button">
                                     <form asp-controller="Cart" asp-action="AddToCart" method="post">
                                         <input type="hidden" name="id" value="@item.MaSanPham" />
+                                        <input type="hidden" name="update" value="true" /> 
+
                                         <div class="input-group">
                                             <a class="cart_quantity_up btn btn-sm btn-secondary" href="javascript:void(0);" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</a>
                                             <input class="cart_quantity_input form-control form-control-sm" type="number" name="quantity" value="@item.SoLuong" autocomplete="off" size="2" min="1">

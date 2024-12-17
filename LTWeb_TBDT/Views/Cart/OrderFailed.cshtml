@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Thanh toán thất bại";
+}
+
+<div class="container">
+    <h2>Thanh toán thất bại!</h2>
+    <p>Rất tiếc, thanh toán của bạn không thành công. Vui lòng kiểm tra lại thông tin hoặc thử lại sau.</p>
+
+    <div class="order-summary">
+        <h3>Thông tin thanh toán:</h3>
+        <ul>
+            <li><strong>Mã đơn hàng:</strong> @ViewData["OrderId"]</li>
+            <li><strong>Tổng tiền:</strong> @ViewData["TotalAmount"] VND</li>
+        </ul>
+    </div>
+
+    <div class="error-message">
+        <p>Đã xảy ra sự cố trong quá trình thanh toán. Nếu bạn cần hỗ trợ, vui lòng liên hệ với chúng tôi.</p>
+    </div>
+
+    <div class="retry-payment">
+        <a href="@Url.Action("RetryPayment", "Cart")" class="btn btn-danger">Thử lại thanh toán</a>
+    </div>
+
+    <div class="continue-shopping">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Trở về trang chủ</a>
+    </div>
+</div>

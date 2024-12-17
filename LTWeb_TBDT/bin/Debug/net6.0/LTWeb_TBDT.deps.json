@@ -13,7 +13,8 @@
           "Microsoft.EntityFrameworkCore": "6.0.35",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.35",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.35",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.18"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.18",
+          "VNPAY.NET": "6.1.0"
         },
         "runtime": {
           "LTWeb_TBDT.dll": {}
@@ -2500,6 +2501,17 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "VNPAY.NET/6.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1"
+        },
+        "runtime": {
+          "lib/net6.0/VNPAY.NET.dll": {
+            "assemblyVersion": "6.1.0.0",
+            "fileVersion": "6.1.0.0"
+          }
+        }
       }
     }
   },
@@ -4048,6 +4060,13 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "VNPAY.NET/6.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oHtHaO1aDVv9dMypCOK1PQg9muihj83BjnNvil2QtZDcJfTSV/4RNH8SEgtCdtIxzHknWrBEaWXb3W9pCxAoCg==",
+      "path": "vnpay.net/6.1.0",
+      "hashPath": "vnpay.net.6.1.0.nupkg.sha512"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uoLCu65j0Lo=",
+  "dgSpecHash": "6yyV6ZIcozc=",
   "success": true,
   "projectFilePath": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\LTWeb_TBDT.csproj",
   "expectedPackageFiles": [
@@ -223,7 +223,8 @@
     "C:\\Users\\chuon\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\chuon\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\chuon\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\chuon\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\chuon\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\chuon\\.nuget\\packages\\vnpay.net\\6.1.0\\vnpay.net.6.1.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -49,7 +49,7 @@
                                 <input type="password" name="confirmPassword" placeholder="Xác nhận mật khẩu">
                             </form>
                             <a class="btn btn-primary" href="">Get Quotes</a>
-                            <button type="submit" class="btn btn-primary">Tiếp tục thanh toán</button> <!-- Changed to submit button -->
+                            <button type="submit" onclick="handlePayment()" class="btn btn-primary">Tiếp tục thanh toán</button> <!-- Changed to submit button -->
                         </div>
                     </div>
                     <div class="col-sm-5 clearfix">
@@ -145,14 +145,22 @@
             </div>
 
             <div class="payment-options">
+
+
                 <span>
-                    <label><input type="radio" name="paymentMethod" value="bank_transfer"> Chuyển khoản ngân hàng trực tiếp</label>
+                    <label>
+                        <input type="radio" name="paymentMethod" value="COD" onclick="setPaymentMethod('cod')"> Thanh toán trực tiếp
+                    </label>
                 </span>
                 <span>
-                    <label><input type="radio" name="paymentMethod" value="check_payment"> Check Payment</label>
+                    <label>
+                        <input type="radio" name="paymentMethod" value="bank_transfer" onclick="setPaymentMethod('bank_transfer')"> Chuyển khoản ngân hàng trực tiếp
+                    </label>
                 </span>
                 <span>
-                    <label><input type="radio" name="paymentMethod" value="paypal"> Paypal</label>
+                    <label>
+                        <input type="radio" name="paymentMethod" value="online_payment" onclick="setPaymentMethod('online_payment')"> Thanh toán trực tuyến
+                    </label>
                 </span>
             </div>
 
@@ -185,6 +193,44 @@
             // If all checks pass, return true to allow form submission
             return true;
         }
+
+
+        let selectedPaymentMethod = null;
+
+        function setPaymentMethod(method) {
+            selectedPaymentMethod = method;
+        }
+
+        function handlePayment() {
+            if (!selectedPaymentMethod) {
+                alert("Vui lòng chọn phương thức thanh toán.");
+                return;
+            }
+
+            if (selectedPaymentMethod === 'online_payment') {
+                const moneyToPay = @ViewBag.TongTien; // Lấy tổng tiền từ ViewBag
+                const description = "Thanh toán đơn hàng";
+
+                fetch(`Cart/CreatePaymentUrl?moneyToPay=${moneyToPay}&description=${encodeURIComponent(description)}`, { method: "POST" })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Có lỗi xảy ra khi tạo URL thanh toán.");
+                        }
+                        return response.text();
+                    })
+                    .then(paymentUrl => {
+                        window.location.href = paymentUrl; // Chuyển hướng đến URL thanh toán
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        alert("Có lỗi xảy ra khi thực hiện thanh toán.");
+                    });
+
+            } else {
+                document.getElementById("formThanhToan").submit();
+            }
+        }
+
     </script>
 </section> <!--/#cart_items-->
 <!-- JavaScript for Validation -->

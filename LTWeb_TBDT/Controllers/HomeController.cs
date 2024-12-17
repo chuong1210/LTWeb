@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using LTWeb_TBDT.Data;
 using LTWeb_TBDT.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -19,15 +20,16 @@ namespace LTWeb_TBDT.Controllers
 
 		}
 
+        [AllowAnonymous]
         public async Task<IActionResult> Index(int? danhMucId, int? nhaSanXuatId, int? minPrice=0, int? maxPrice=1000000000, int page = 1, int pageSize = 6)
         {
             if (User.Identity.IsAuthenticated)
             {
                 // Nếu người dùng đã đăng nhập, kiểm tra vai trò
-               
+
                 if (User.IsInRole("Admin"))
                 {
-                    return RedirectToAction("DashBoard", "Manager"); 
+                    return RedirectToAction("DashBoard", "Manager");
                 }
             }
             IQueryable<LTWeb_TBDT.Data.SanPham> query = _context.SanPhams
