@@ -1,4 +1,8 @@
-﻿
+﻿<style>
+	.sp{
+		object-fit:cover
+	}
+</style>
 <div class="left-sidebar">
 	<h2>Category</h2>
 @* 	<div class="panel-group category-products" id="accordian">
@@ -14,19 +18,29 @@
 
 		@await Component.InvokeAsync("NhaSanXuat")
 	</div><!--/brands_products-->
-
-	<div class="price-range">
-		<!--price-range-->
-		<h2>Price Range</h2>
-		<div class="well text-center">
-			<input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2"><br />
-			<b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
-		</div>
-	</div><!--/price-range-->
+    <form method="get" action="@Url.Action("Index","Home")">
+        <div class="price-range">
+            <h2>Price Range</h2>
+            <div class="well text-center">
+                <input type="number" name="minPrice" placeholder="Min Price" value="@ViewBag.MinPrice" />
+                <input type="number" name="maxPrice" placeholder="Max Price" value="@ViewBag.MaxPrice" />
+                <br />
+                <button type="submit" class="btn btn-primary">Apply</button>
+            </div>
+        </div>
+        @if (ViewBag.DanhMucId != null)
+        {
+            <input type="hidden" name="danhMucId" value="@ViewBag.DanhMucId" />
+        }
+        @if (ViewBag.NhaSanXuatId != null)
+        {
+            <input type="hidden" name="nhaSanXuatId" value="@ViewBag.NhaSanXuatId" />
+        }
+    </form>
 
 	<div class="shipping text-center">
 		<!--shipping-->
-		<img src="images/home/shipping.jpg" alt="" />
+		<img class="img-responsive" src="images/home/spjpg.jpg" alt="" />
 	</div><!--/shipping-->
 
 </div>

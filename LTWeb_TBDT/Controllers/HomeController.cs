@@ -2,6 +2,7 @@
 using LTWeb_TBDT.Data;
 using LTWeb_TBDT.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace LTWeb_TBDT.Controllers
@@ -18,43 +19,57 @@ namespace LTWeb_TBDT.Controllers
 
 		}
 
-        public async Task<IActionResult> Index(int? danhMucId, int? nhaSanXuatId)
+        public async Task<IActionResult> Index(int? danhMucId, int? nhaSanXuatId, int? minPrice=0, int? maxPrice=1000000000, int page = 1, int pageSize = 6)
         {
-             if (User.Identity.IsAuthenticated)
+            if (User.Identity.IsAuthenticated)
             {
                 // Nếu người dùng đã đăng nhập, kiểm tra vai trò
                
                 if (User.IsInRole("Admin"))
                 {
-                    return RedirectToAction("DashBoard", "Manager"); // Điều hướng về trang quản lý nếu là admin
+                    return RedirectToAction("DashBoard", "Manager"); 
                 }
             }
-            // Lấy tất cả các sản phẩm, nếu có danh mục thì lọc theo danh mục
-            List<LTWeb_TBDT.Data .SanPham> products = new List<LTWeb_TBDT.Data.SanPham>();
+            IQueryable<LTWeb_TBDT.Data.SanPham> query = _context.SanPhams
+                                         .Include(s => s.MaNhaSanXuatNavigation)
+                                         .Include(s => s.MaDanhMucNavigation);
 
-            if (danhMucId.HasValue)
+			if (danhMucId.HasValue)
+			{
+				query = query.Where(sp => sp.MaDanhMuc == danhMucId.Value);
+				ViewBag.DanhMucId = danhMucId; // Truyền giá trị sang View
+			}
+
+			if (nhaSanXuatId.HasValue)
+			{
+				query = query.Where(sp => sp.MaNhaSanXuat == nhaSanXuatId.Value);
+				ViewBag.NhaSanXuatId = nhaSanXuatId; // Truyền giá trị sang View
+			}
+
+
+            if (minPrice.HasValue)
             {
-                // Lọc sản phẩm theo danh mục
-                products = await _context.SanPhams.Where(sp => sp.MaDanhMuc == danhMucId.Value).ToListAsync();
-                return View(products);
-
+                query = query.Where(sp => sp.GiaBan >= minPrice.Value);
+                ViewBag.MinPrice = minPrice;
             }
-            if (nhaSanXuatId.HasValue)
+
+            if (maxPrice.HasValue)
             {
-                 products = await _context.SanPhams
-                              .Where(p => p.MaNhaSanXuat == nhaSanXuatId)
-                              .Include(p => p.MaDanhMucNavigation)
-                              .Include(p => p.MaNhaSanXuatNavigation)
-                              .ToListAsync();
-                return View(products);
-
+                query = query.Where(sp => sp.GiaBan <= maxPrice.Value);
+                ViewBag.MaxPrice = maxPrice;
             }
-          
-                // Nếu không có tham số danh mục, lấy tất cả sản phẩm
-                products = await _context.SanPhams
-                     .Include(s => s.MaNhaSanXuatNavigation)
-                     .Include(s => s.MaDanhMucNavigation)
-                     .ToListAsync();
+            // Tính tổng số sản phẩm
+            int totalItems = await query.CountAsync();
+
+            // Phân trang bằng Skip và Take
+            List<LTWeb_TBDT.Data.SanPham> products = await query
+                                            .Skip((page - 1) * pageSize)
+                                            .Take(pageSize)
+            .ToListAsync();
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
 
 
             return View(products);

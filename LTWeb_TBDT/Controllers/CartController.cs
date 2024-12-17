@@ -139,8 +139,8 @@ namespace LTWeb_TBDT.Controllers
                     NgayDatHang = DateTime.Now,
                     MaKhachHang = int.Parse(maKhachHangClaim),
                     TongTien = (decimal?)totalAmount,
-                    TrangThai = null
-                };
+                    TrangThai = "Chưa duyệt"
+                 };
 
             }
             else
@@ -151,8 +151,8 @@ namespace LTWeb_TBDT.Controllers
                     NgayDatHang = DateTime.Now,
                     MaKhachHang = null,
                     TongTien = (decimal?)totalAmount,
-                    TrangThai = null
-                };
+                    TrangThai = "Chưa duyệt"
+                 };
 
             }
             _connectHoaDon.ThemHoaDon(hoaDon);

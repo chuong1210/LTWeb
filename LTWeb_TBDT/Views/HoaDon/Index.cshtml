@@ -5,7 +5,8 @@
 
     @if (!Model.Any())
     {
-        <div class="alert alert-info text-center">Hiện không có đơn hàng nào.</div>
+
+        <div class="alert alert-info text-center">Bạn  có hóa đơn  nào.</div>
     }
     else
     {
@@ -17,6 +18,8 @@
                         <th>Tổng tiền</th>
                         <th>Trạng thái</th>
                         <th>Chi tiết</th>
+=======
+                        <th>Duyet don</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,9 +32,18 @@
                                 <span class="badge @GetBadgeClass(order.TrangThai)">@order.TrangThai</span>
                             </td>
                             <td class="text-center">
-                                <a href="@Url.Action("Detail", "Cart", new { id = order.MaHoaDon })"
+
+                                <a href="@Url.Action("Detail", "HoaDon", new { id = order.MaHoaDon })"
                                    class="btn btn-info btn-sm">
-                                    <i class="fas fa-info-circle"></i> Xem chi tiết
+                                    <i class="fas fa-info-circle"></i> Xem chi tiết 
+
+                                </a>
+                            </td>
+
+                            <td class="text-center">
+                                <a href="@Url.Action("Index", "HoaDon", new { id = order.MaHoaDon })"
+                                   class="btn btn-info btn-sm">
+                                    <i class="fas fa-pencil"></i> Duyệt Đơn
                                 </a>
                             </td>
                         </tr>

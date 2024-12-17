@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CS0iq3altzeDpPglsFWKdqjR6Lu+O8HG/BDcXzytZyY=",
+  "Hash": "MB3c84Rosh/JyWcRUUHZp5jcYidmPK8PBJTEZYlVp/U=",
   "Source": "LTWeb_TBDT",
   "BasePath": "_content/LTWeb_TBDT",
   "Mode": "Default",
@@ -6724,12 +6724,12 @@
       "OriginalItemSpec": "wwwroot\\images\\home\\girl1.jpg"
     },
     {
-      "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\home\\girl2.jpg",
+      "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\home\\girl222.jpg",
       "SourceId": "LTWeb_TBDT",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\",
       "BasePath": "_content/LTWeb_TBDT",
-      "RelativePath": "images/home/girl2.jpg",
+      "RelativePath": "images/home/girl222.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -6740,15 +6740,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\home\\girl2.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\home\\girl222.jpg"
     },
     {
-      "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\home\\girl3.jpg",
+      "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\home\\girl333.jpg",
       "SourceId": "LTWeb_TBDT",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\",
       "BasePath": "_content/LTWeb_TBDT",
-      "RelativePath": "images/home/girl3.jpg",
+      "RelativePath": "images/home/girl333.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -6759,7 +6759,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\home\\girl3.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\home\\girl333.jpg"
     },
     {
       "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\home\\iframe1.png",
@@ -7199,12 +7199,12 @@
       "OriginalItemSpec": "wwwroot\\images\\home\\searchicon.png"
     },
     {
-      "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\home\\shipping.jpg",
+      "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\home\\shipping1.jpg",
       "SourceId": "LTWeb_TBDT",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\",
       "BasePath": "_content/LTWeb_TBDT",
-      "RelativePath": "images/home/shipping.jpg",
+      "RelativePath": "images/home/shipping1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -7215,7 +7215,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\home\\shipping.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\home\\shipping1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\home\\spjpg.jpg",
+      "SourceId": "LTWeb_TBDT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\",
+      "BasePath": "_content/LTWeb_TBDT",
+      "RelativePath": "images/home/spjpg.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\home\\spjpg.jpg"
     },
     {
       "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\product-details\\1.jpg",
@@ -7349,6 +7368,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product-details\\similar3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\R.jpg",
+      "SourceId": "LTWeb_TBDT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\",
+      "BasePath": "_content/LTWeb_TBDT",
+      "RelativePath": "images/R.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\R.jpg"
     },
     {
       "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\shop\\advertisement.jpg",
@@ -7672,6 +7710,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\SP009.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\images\\thiet-bi-dien-tu-la-gi-1-2.jpg",
+      "SourceId": "LTWeb_TBDT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\",
+      "BasePath": "_content/LTWeb_TBDT",
+      "RelativePath": "images/thiet-bi-dien-tu-la-gi-1-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\thiet-bi-dien-tu-la-gi-1-2.jpg"
     },
     {
       "Identity": "C:\\Users\\chuon\\source\\repos\\LTWeb_TBDT\\LTWeb_TBDT\\wwwroot\\index.html",
